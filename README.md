@@ -27,3 +27,5 @@ dates
 - [ ] [23jan 14-17]
 - [ ] [06feb 14-17]
 - [ ] 13feb: **NO CLASS**
+
+new course material will follow - meanwhile check out last semester <https://github.com/redFrik/udk09-Bits_and_Pieces>

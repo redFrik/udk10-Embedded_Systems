@@ -1,10 +1,14 @@
-131017
-======
+quick general course introduction
+--------------------
 
-* links previous semesters... <http://redfrik.github.io/udk00-Audiovisual_Programming/>
-* and dates + times for this course... <https://github.com/redFrik/udk10-Embedded_Systems>
+* links to previous semesters... <http://redfrik.github.io/udk00-Audiovisual_Programming/>
+* and dates + times for this course... <https://github.com/redFrik/udk10-Embedded_Systems> <-save this page
+* note we do 3h sessions 2014 to catch up
 * this first time we will play with raspberry pi, but then concentrate on beaglebone black
 * no need to buy any hardware - the mini computers and other stuff will be provided as a loan
+
+131017
+======
 
 _raspberry pi overview, introduction, ssh login, getting around and making sound_
 
@@ -14,32 +18,32 @@ _raspberry pi overview, introduction, ssh login, getting around and making sound
 * sound support is not so good
 * lots of material online - books, reference projects, blogs, forums
 
+demo projects
 ====================
 
 //--4 channel video player
 --------------------
-for the dance piece Ich(a) by Zufit Simon
-<http://tanzforumberlin.de/trailer369.php>
-<http://www.fredrikolofsson.com/f0blog/?q=node/593>
-i needed a way to send out 4 separate hi-quality video streams.  the videos didn't need to play back in frame sync, but they had to have a manual trigger to go to black and start the next video.
+for the dance piece Ich(a) by Zufit Simon (<http://tanzforumberlin.de/trailer369.php>) i needed a way to send out 4 separate hi-quality video streams.  the videos didn't need to play back in frame sync, but they had to have a manual trigger to go to black and start the next video.
 on the board is a small python program that starts automatically.  it reads a button and uses omxplayer to cycle between mp4 files.  the black out is just a short mp4 with only black frames.
-see link for the python code and schematics.
+
+see <http://www.fredrikolofsson.com/f0blog/?q=node/593> for the python code and installation instructions.
 
 //--32 channel pwm led driver
 --------------------
-for the piece redAlert.
-here i used model A because it is cheaper but mainly because it requires less current.  without the leds the rpi + wlan + driver circuit draws 360mA.  with all the 32*3 leds turned on it's 1000mA total.
+for the piece redAlert to be premiered in stockholm 9nov i wanted to control hundreds of leds.  here i used model A because it is cheaper but mainly because it requires less current.  without the leds the rpi + wlan + driver circuit draws 360mA.  with all the 32*3 leds turned on it's 1000mA total.
 
+see <http://www.fredrikolofsson.com/f0blog/?q=node/593> for pictures, code and schematics.
+
+setting up a raspberry pi
 ====================
 
 //--operating systems
-there are many different ones.  i can recommend the standard raspbian <http://www.raspberrypi.org/downloads>
+--------------------
+there are many different systems you can run on a raspberry pi.  most of them are linux distributions build on debian.  i can recommend the standard raspbian <http://www.raspberrypi.org/downloads>
 
 or for a minimal headless (no windows, gui etc - only terminal) install you can try moebius <http://moebiuslinux.sourceforge.net>
 
 and another system with preinstalled music software is satellite <https://ccrma.stanford.edu/wiki/Satellite_CCRMA_First_Steps>
-
-====================
 
 //--minimum requirements
 --------------------

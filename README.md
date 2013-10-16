@@ -27,3 +27,5 @@ dates
 - [ ] [23jan 14-17]
 - [ ] [06feb 14-17]
 - [ ] 13feb: **NO CLASS**
+
+links to previous semesters... <http://redfrik.github.io/udk00-Audiovisual_Programming/>

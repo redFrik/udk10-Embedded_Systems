@@ -28,11 +28,9 @@ on the board is a small python program that starts automatically.  it reads a bu
 
 see <http://www.fredrikolofsson.com/f0blog/?q=node/593> for the python code and installation instructions.
 
-//--32 channel pwm led driver
+//--96 channel pwm led driver
 --------------------
-for the piece redAlert to be premiered in stockholm 9nov i wanted to control hundreds of leds.  here i used model A because it is cheaper but mainly because it requires less current.  without the leds the rpi + wlan + driver circuit draws 360mA.  with all the 32*3 leds turned on it's 1000mA total.
-
-see <http://www.fredrikolofsson.com/f0blog/?q=node/593> for pictures, code and schematics.
+for the piece redAlert to be premiered in stockholm 9nov i wanted to control hundreds of leds.  i built three boxes with raspberry pis that could drive 32 channels each.  i control them from supercollider with osc via wifi.  here i used model A because it is cheaper but mainly because it requires less current.  without the leds the rpi + wlan + driver circuit draws 360mA.  with all the 32*3 leds turned on it's 1000mA total.
 
 setting up a raspberry pi
 ====================
@@ -77,24 +75,8 @@ logging in for the first time:
 * `sudo apt-get upgrade` to install any software updates (these two are good to run once in a while)
 
 ssh troubleshooting:
-* if you get...
-`ssh: connect to host 192.168.1.11 port 22: Operation timed out`
-then likely the ip is wrong or the rpi isn't powered.
-* if you get...
-`@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@`
-`@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @`
-`@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@`
-`IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!`
-`Someone could be eavesdropping on you right now (man-in-the-middle attack)!`
-`It is also possible that a host key has just been changed.`
-`The fingerprint for the RSA key sent by the remote host is`
-`xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx.`
-`Please contact your system administrator.`
-`Add correct host key in /Users/Stirling/.ssh/known_hosts to get rid of this message.`
-`Offending RSA key in /Users/Stirling/.ssh/known_hosts:35`
-`RSA host key for 192.168.1.53 has changed and you have requested strict checking.`
-`Host key verification failed.`
-on your laptop while trying to log in then no worries.  just reset the ssh key with the following command.
+* if you get `ssh: connect to host 192.168.1.11 port 22: Operation timed out` then likely the ip is wrong or the rpi isn't powered.
+* if you get `WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!` on your laptop while trying to log in then no worries.  just reset the ssh key with the following command.
 * `ssh-keygen -R 192.168.1.53`
 
 //--running sc on rpi raspbian
@@ -112,7 +94,7 @@ on your laptop while trying to log in then no worries.  just reset the ssh key w
 * `> 0.exit`
 * `$ pkill jackd`
 
-note:
+notes:
 * lines beginning with a $ means terminal
 * lines beginning with a > means it's within sclang and should be executed with a ^L+return in the end (ctrl+L on osx).
 

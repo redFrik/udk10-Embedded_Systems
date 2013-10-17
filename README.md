@@ -10,7 +10,7 @@ room111, UdK, medienhaus, kleistpark
 
 dates
 -----
-- [ ] [17oct 14-16](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131017): raspberry pi overview, introduction, ssh login, getting around and making sound
+- [x] [17oct 14-16](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131017): raspberry pi overview, introduction, ssh login, getting around and making sound
 - [ ] [24oct] **NO CLASS** (design workshop)
 - [ ] 31oct: **NO CLASS**
 - [ ] 07nov: **NO CLASS**

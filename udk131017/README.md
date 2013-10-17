@@ -106,3 +106,8 @@ some random projects...
 * <http://www.gundersen.net/raspberry-pi-making-it-slimmer/>
 * <http://www.makeuseof.com/tag/how-to-build-a-raspberry-pi-twitter-bot/>
 * <http://www.youtube.com/watch?v=KYO9N4kDK_o> (sonic pi is a simplified supercollider)
+
+some getting started guides...
+* <http://learn.adafruit.com/category/raspberry-pi> the best - lots of good projects and guides here
+* <http://www.engadget.com/2012/09/04/raspberry-pi-getting-started-guide-how-to/> more basic
+* <http://www.amazon.com/Getting-Started-Raspberry-Pi-Make/dp/1449344216> an ok book

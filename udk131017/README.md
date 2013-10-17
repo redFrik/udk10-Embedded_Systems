@@ -4,7 +4,7 @@ quick general course introduction
 * links to previous semesters... <http://redfrik.github.io/udk00-Audiovisual_Programming/>
 * and dates + times for this course... <https://github.com/redFrik/udk10-Embedded_Systems> <-save this page
 * note we do 3h sessions 2014 to catch up
-* this first time we will play with raspberry pi, but then concentrate on beaglebone black
+* this first time we will play with raspberry pi, but then concentrate on beaglebone black.  many things will work the same on the rpi and the bbb.
 * no need to buy any hardware - the mini computers and other stuff will be provided as a loan
 
 131017
@@ -12,10 +12,10 @@ quick general course introduction
 
 _raspberry pi overview, introduction, ssh login, getting around and making sound_
 
-* cheap linux computer
+* raspberry pi is a cheap computer than can run linux (meaning you can also run supercollider)
 * really good video playback
 * ok for connecting sensors and controlling leds+motors etc.
-* sound support is not so good
+* sound support is not so good unfortunately (low sound quality, noise, hickups)
 * lots of material online - books, reference projects, blogs, forums
 
 demo projects
@@ -31,6 +31,8 @@ see <http://www.fredrikolofsson.com/f0blog/?q=node/593> for the python code and 
 //--96 channel pwm led driver
 --------------------
 for the piece redAlert to be premiered in stockholm 9nov i wanted to control hundreds of leds.  i built three boxes with raspberry pis that could drive 32 channels each.  i control them from supercollider with osc via wifi.  here i used model A because it is cheaper but mainly because it requires less current.  without the leds the rpi + wlan + driver circuit draws 360mA.  with all the 32*3 leds turned on it's 1000mA total.
+
+see <http://www.fredrikolofsson.com/f0blog/?q=node/599> for schematics, code and pictures.
 
 setting up a raspberry pi
 ====================

@@ -3,7 +3,7 @@ quick general course introduction
 
 * links to previous semesters... <http://redfrik.github.io/udk00-Audiovisual_Programming/>
 * and dates + times for this course... <https://github.com/redFrik/udk10-Embedded_Systems> <-save this page
-* note we do 3h sessions 2014 to catch up
+* note in january and february we will do 3h sessions to catch up
 * this first time we will play with raspberry pi, but then concentrate on beaglebone black.  many things will work the same on the rpi and the bbb.
 * no need to buy any hardware - the mini computers and other stuff will be provided as a loan
 
@@ -83,7 +83,7 @@ ssh troubleshooting:
 
 //--running sc on rpi raspbian
 --------------------
-2013-09-25-wheezy-raspbian.img comes with sc3.4.5 installed.
+install 2013-09-25-wheezy-raspbian.img like above and also update to get sc+jack (sudo apt-get update; sudo apt-get upgrade)
 * `$ ssh pi@192.168.1.53`
 * `$ jackd -P 95 -p 32 -d dummy -C 1 &`
 * `$ alsa_out -d hw:1 2>&1 > /dev/null &` use hw:1 for usb soundcard, and hw:0 for internal onboard sound

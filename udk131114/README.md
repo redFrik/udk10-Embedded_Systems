@@ -85,14 +85,14 @@ our first little python program.  to type it in we need a text editor.
 
 then type in the following.  note: in python indentation (tabs) are important
 
-`
+```
 import time
 val= 0
 while True:
         val= val+1
         print val
         time.sleep(1)
-`
+```
 
 then press ctrl+o to save and ctrl+x to exit the pico text editor.
 now run the program with...
@@ -108,7 +108,7 @@ again create the file and start the text editor with...
 
 * `pico digitaltest.py`
 
-and then type this...
+and then type this (or copy and paste - it also works over ssh)...
 
 ```
 import Adafruit_BBIO.GPIO as GPIO

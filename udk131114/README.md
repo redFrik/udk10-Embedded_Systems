@@ -228,4 +228,4 @@ avoid pulling the power.  that might corrupt the sd card and then you can't boot
 * <http://learn.adafruit.com/category/beaglebone>
 * <http://www.element14.com/community/community/knode/single-board_computers/next-gen_beaglebone/blog>
 * <http://www.michaelhleonard.com/raspberry-pi-or-beaglebone-black/>
-
+* <http://www.codecademy.com> and click python

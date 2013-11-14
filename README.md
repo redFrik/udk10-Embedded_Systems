@@ -14,7 +14,7 @@ dates
 - [ ] [24oct] **NO CLASS** (design workshop)
 - [ ] 31oct: **NO CLASS**
 - [ ] 07nov: **NO CLASS**
-- [ ] [14nov 14-16]
+- [ ] [14nov 14-16](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131114): beaglebone black overview, debian setup and installation
 - [ ] [21nov 14-16]
 - [ ] [28nov 14-16]
 - [ ] [05dec 14-16]

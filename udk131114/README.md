@@ -120,7 +120,7 @@ while True:
         time.sleep(0.25)
 ```
 
-ctrl+o and ctrl+x to save and exit, use `sudo python digitaltext.py` to run.
+ctrl+o and ctrl+x to save and exit, use `sudo python digitaltest.py` to run.
 note: we need to use sudo to run this python program because we need to have root privilegiers to access the hardware gpio pins.
 
 while the program is running (it should print 0, 0, 0, ...) connect a cable between pin 41 and 3.3v.

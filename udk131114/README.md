@@ -128,6 +128,8 @@ NOTE: ONLY CONNECT TO 3.3V!  (P9_3 or P9_4).  if you connect this to the wrong p
 the number should change to 1, 1, 1, ...
 stop with ctrl+c
 
+![digital test](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131114/IMG_20131114_113821.jpg)
+
 //--third program
 -----------------
 here we read an analog sensor and print the result.
@@ -147,6 +149,8 @@ while True:
 while the program is running connect a cable between pin 39 and vdd_adc or gnd_adc (or better connect a potentiometer to all three with 39 going to pot center pin).
 NOTE: ONLY CONNECT TO VDD_ADC or GND_ADC (1.8V).  if you connect this to the wrong pin you can destroy the board.
 you should see the printed number vary from 0 to 1799.
+
+![analog test](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131114/IMG_20131114_114120.jpg)
 
 //--send osc example
 --------------------
@@ -197,6 +201,19 @@ OSCFunc({|msg| msg.postln}, '/dig');
 
 it should print out the incoming sensor values.
 now you can use that to start synths, set parameters or whatever.
+
+if you get the error...
+```
+Traceback (most recent call last):
+  File "osctest.py", line 29, in <module>
+    sc.send(msg)
+  File "/usr/local/lib/python2.7/dist-packages/OSC.py", line 1222, in send
+    raise OSCClientError("while sending: %s" % str(e))
+OSC.OSCClientError: while sending: [Errno 111] Connection refused
+```
+then just start supercollider and try again (or comment out the two sc.send lines).
+
+![osc test](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131114/IMG_20131114_115131.jpg)
 
 //--turning off
 ---------------

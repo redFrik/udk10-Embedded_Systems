@@ -154,7 +154,7 @@ you should see the printed number vary from 0 to 1799.
 
 //--send osc example
 --------------------
-in this example we read one digital and one analog sensor and send it via to another computer.
+in this example we read one digital and one analog sensor and send it via open sound control to another computer (e.g. your laptop).
 
 * `pico osctest.py`
 

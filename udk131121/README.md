@@ -30,7 +30,7 @@ And patch jack (the one we just installed above is broken)...
 
 //--start sc
 ------------
-* `jackd -P 95 -d dummy -C 1 &`
+* `jackd -d dummy -C 1 &`
 * `alsa_out -d hw:1 2>&1 > /dev/null &`
 * `sclang`
 * `s.boot^L`

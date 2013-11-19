@@ -54,7 +54,7 @@ And patch jack (the one we just installed above is broken)...
 -----------------------
 We'll need the latest version of jack to run supercollider.  And to get it we must built it ourselves like this...
 
-* `sudo apt-get install libsamplerate0-dev libasound2-dev libsndfile1-dev`
+* `sudo apt-get install build-essential git libsamplerate0-dev libasound2-dev libsndfile1-dev`
 * `git clone git://github.com/jackaudio/jack2.git`
 * `cd jack2`
 * `./waf configure --alsa`

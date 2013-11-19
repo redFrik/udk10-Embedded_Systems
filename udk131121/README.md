@@ -11,17 +11,17 @@ And that you have connected an usb soundcard with headphones/speaker.
 * `sudo apt-get install alsa-base`
 * `sudo depmod`
 * `sudo adduser debian audio`
-* `sudo reboot`
-* `sudo aplay -l` # make sure usb audio is listed
-* `speaker-test -Ddefault:CARD=Device` # stop with ctrl+c
+* `sudo reboot` # make sure usb audio adapter is inserted from here on
+* `sudo aplay -l` # make sure usb audio is listed (should show two devices: hdmi and c-media (or whatever usb sound you're using))
+* `speaker-test -Ddefault:CARD=Device` # should make some noise. stop with ctrl+c
 
 
 //--install supercollider 3.4.5
 -------------------------------
-Now install an old version of sc...
-* `sudo apt-get install supercollider` # accept jack realtime memory when asked
+This installs an old version of sc...
+* `sudo apt-get install supercollider` # accept jack realtime privileges when asked.
 
-And patch jack...
+And patch jack (the one we just installed above is broken)...
 * `wget -O - http://rpi.autostatic.com/autostatic.gpg.key| sudo apt-key add -`
 * `sudo wget -O /etc/apt/sources.list.d/autostatic-audio-raspbian.list http://rpi.autostatic.com/autostatic-audio-raspbian.list`
 * `sudo apt-get update`
@@ -50,7 +50,7 @@ And patch jack...
 
 
 
-//--install newest jack
+//--install newest jack (temp)
 -----------------------
 We'll need the latest version of jack to run supercollider.  And to get it we must built it ourselves like this...
 

@@ -96,6 +96,29 @@ s.waitForBoot({
 });
 ```
 
+//--extra
+---------
+Some simple python experiments. Type `pico mylittleprogram.py` and add this...
+```
+import time
+
+str= "hello udk!"
+cnt= 0
+
+while True:
+        out= ""
+        abc= 60 
+        while abc>0:
+                out= out+str[(cnt+abc)%10]
+                abc= abc-1
+        print out        
+        cnt= cnt+2
+        time.sleep(0.05)
+```
+Then press ctrl+o and ctrl+x to save and exit. Run the python program with...
+`python mylittleprogram.py`
+And stop with ctrl+c
+
 //--links:
 ----------
 * <http://supercollider.github.io/development/building-beagleboneblack.html> here i put the same thing but a bit simplified

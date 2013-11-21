@@ -56,21 +56,22 @@ This builds and installs supercollider...
 ------------
 Finally we can start sc and make sound.
 
-1. `jackd -dalsa -dhw:1,0 -p128 -n3 -s &` # the -dhw:1,0 means usb soundcard
+1. `jackd -dalsa -dhw:1,0 -p128 -n3 -s &`
 2. `sclang` # ignore the error "ERROR: No GUI scheme active" - it is harmless.
 3. `s.boot;`
-4. `a= {SinOsc.ar([400,404],0,0.1)}.play;`
+4. `a= {SinOsc.ar([400, 404], 0, 0.1)}.play;`
 5. `s.dump;`
 6. `a.free;`
 7. `s.quit;`
 8. `0.exit;`
+9. `pkill jackd`
 
 //--get low latency audio (advanced)
 ------------------------------------
 To run jack in realtime and get lower latency (faster response in the sound), you'll need to do the following...
 
 1. `sudo pico /etc/security/limits.conf`
-2. and add the following lines at the end of the file.
+2. and add the following lines somewhere before it says end of file.
 3.    `@audio - memlock 256000`
 4.    `@audio - rtprio 99`
 5.    `@audio - nice -19`
@@ -79,7 +80,7 @@ To run jack in realtime and get lower latency (faster response in the sound), yo
 
 //--backup
 ----------
-When all the above is working i'd recommend to do a backup of your sd card.  On osx it's easy to do with [PiCopier](http://ivanx.com/raspberrypi/). Then if anything break you can restore your system from this backup with Pi Filler.
+When all the above is working i'd recommend to do a backup of your sd card.  On osx it's easy to do with [PiCopier](http://ivanx.com/raspberrypi/). Then if anything break you can restore your system from this backup with Pi Filler (same as we did writing the original disk image last week).
 
 //--loading files
 -----------------

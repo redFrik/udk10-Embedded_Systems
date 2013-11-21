@@ -66,8 +66,8 @@ Finally we can start sc and make sound.
 8. `0.exit;`
 9. `pkill jackd`
 
-//--get low latency audio (advanced)
-------------------------------------
+//--get low latency audio
+-------------------------
 To run jack in realtime and get lower latency (faster response in the sound), you'll need to do the following...
 
 1. `sudo pico /etc/security/limits.conf`

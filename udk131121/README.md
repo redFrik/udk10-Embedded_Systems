@@ -3,63 +3,98 @@
 
 _beaglebone black setup sound and install supercollider_
 
-//--install alsa and test sound
--------------------------------
-This assume you've done all the instructions [previous](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131114) week.
-And that you have connected an usb soundcard with headphones/speaker.
+This time we will install supercollider and some required extras like jack.
+Some of the commands will take quite a long time, so in between we will write small python programs on our laptops.
+
+The below assume you've done all the instructions from [previous](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131114) week.
+
+//--install alsa + test sound
+-----------------------------
+Connect the ethernet cable and power like last week and make sure you have connected the usb soundcard and headphones/speaker.  The soundcard i used is [this](http://dx.com/p/virtual-5-1-surround-usb-2-0-external-sound-card-22475) one, but it should also work with higher quality usb adapters.
 
 * `sudo apt-get install alsa-base`
 * `sudo depmod`
 * `sudo adduser debian audio`
-* `sudo reboot` # make sure usb audio adapter is inserted from here on
-* `sudo aplay -l` # make sure usb audio is listed (should show two devices: hdmi and c-media (or whatever usb sound you're using))
+* `sudo reboot` # make sure usb audio adapter is inserted before this reboot - avoid hot-plugging
+* `sudo aplay -l` # make sure generic usb audio device is listed (should show two devices: hdmi and generic usb)
 * `speaker-test -Ddefault:CARD=Device` # should make some noise. stop with ctrl+c
 
-
-//--install supercollider 3.4.5
--------------------------------
-This installs an old version of sc...
-* `sudo apt-get install supercollider` # accept jack realtime privileges when asked.
-
-And patch jack (the one we just installed above is broken)...
-* `wget -O - http://rpi.autostatic.com/autostatic.gpg.key| sudo apt-key add -`
-* `sudo wget -O /etc/apt/sources.list.d/autostatic-audio-raspbian.list http://rpi.autostatic.com/autostatic-audio-raspbian.list`
-* `sudo apt-get update`
-* `sudo apt-get --no-install-recommends install jackd2`
-* `sudo reboot`
-
-//--start sc
-------------
-* `jackd -d dummy -C 1 &`
-* `alsa_out -d hw:1 2>&1 > /dev/null &`
-* `sclang`
-* `s.boot^L`
-* `"jack_connect SuperCollider:out_1 alsa_out:playback_1 &".unixCmd^L`
-* `"jack_connect SuperCollider:out_2 alsa_out:playback_2 &".unixCmd^L`
-* `a={SinOsc.ar([400,404],0,0.1)}.play^L`
-* `a.release^L`
-* `0.exit^L`
-* `pkill jackd`
-
-
-
-
-
-
-
-
-
-
-//--install newest jack (temp)
------------------------
-We'll need the latest version of jack to run supercollider.  And to get it we must built it ourselves like this...
+//--install jack
+----------------
+To run supercollider we first need to manually install and build the latest jackd...
 
 * `sudo apt-get install build-essential git libsamplerate0-dev libasound2-dev libsndfile1-dev`
 * `git clone git://github.com/jackaudio/jack2.git`
 * `cd jack2`
 * `./waf configure --alsa`
-* `./waf build`
+* `./waf build` # this takes a while
 * `sudo ./waf install`
 * `cd ..`
 * `sudo rm -r jack2`
 * `sudo ldconfig`
+* `sudo reboot`
+
+//--install supercollider 3.7alpha0
+-----------------------------------
+This builds and installs supercollider...
+
+* `sudo apt-get install cmake libavahi-client-dev libicu-dev libreadline-dev libfftw3-dev libxt-dev`
+* `git clone --recursive git://github.com/supercollider/supercollider.git supercollider`
+* `cd supercollider`
+* `git checkout ddd8c8d75dd00263acf593b062ecbb06686a4574` # an older version from summer2013 that still can be compiled with gcc
+* `git submodule init && git submodule update`
+* `mkdir build && cd build`
+* `cmake -L -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DSSE=OFF -DSSE2=OFF -DSUPERNOVA=OFF -DNOVA_SIMD=ON -DNATIVE=OFF -DSC_QT=OFF -DSC_WII=OFF -DSC_ED=OFF -DSC_IDE=OFF -DSC_EL=OFF -DCMAKE_C_FLAGS="-march=armv7-a -mtune=cortex-a8 -mfloat-abi=hard -mfpu=neon" -DCMAKE_CXX_FLAGS="-march=armv7-a -mtune=cortex-a8 -mfloat-abi=hard -mfpu=neon" ..`
+* `make` # this takes a while
+* `sudo make install`
+* `cd ../..`
+* `sudo rm -r supercollider`
+* `sudo ldconfig`
+* `sudo reboot`
+
+//--start sc
+------------
+Finally we can start sc and make sound.
+
+1. `jackd -dalsa -dhw:1,0 -p128 -n3 -s &` # the -dhw:1,0 means usb soundcard
+2. `sclang` # ignore the error "ERROR: No GUI scheme active" - it is harmless.
+3. `s.boot;`
+4. `a= {SinOsc.ar([400,404],0,0.1)}.play;`
+5. `s.dump;`
+6. `a.free;`
+7. `s.quit;`
+8. `0.exit;`
+
+//--get low latency audio (advanced)
+------------------------------------
+To run jack in realtime and get lower latency (faster response in the sound), you'll need to do the following...
+
+1. `sudo pico /etc/security/limits.conf`
+2. and add the following lines at the end of the file.
+3.    `@audio - memlock 256000`
+4.    `@audio - rtprio 99`
+5.    `@audio - nice -19`
+6. save and exit with ctrl+o, ctrl+x
+7. `sudo reboot` # after reboot start sc again like in previous step
+
+//--backup
+----------
+When all the above is working i'd recommend to do a backup of your sd card.  On osx it's easy to do with [PiCopier](http://ivanx.com/raspberrypi/). Then if anything break you can restore your system from this backup with Pi Filler.
+
+//--loading files
+-----------------
+To run supercollider code from a textfile, you write the code on your laptop, save it to a .scd file and copy it over.
+
+1. `jackd -dalsa -dhw:1,0 -p128 -n3 -s &`
+2. `sclang mycode.scd`
+
+A simple example .scd file could look like this...
+```
+s.waitForBoot({
+	a= {SinOsc.ar([400, 404], 0, 0.1)}.play;
+});
+```
+
+//--links:
+----------
+* <http://supercollider.github.io/development/building-beagleboneblack.html> here i put the same thing but a bit simplified

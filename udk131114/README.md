@@ -36,7 +36,7 @@ note: you can also connect the ethernet cable directly to your wlan router (if t
 to log in to the bbb from our laptop via ssh, we need to know the bbb's ip address.  this you can easiest find either by looking in the router status panel of connected devices, or using the LanScan.app (<http://www.iwaxx.com/lanscan/>, free on appstore).
 
 * (osx) if you have the bbb connected directly to your mac, go to system preferences and sharing.  enable internet sharing (wlan to ethernet).
-* (osx) start LanScan, press space to scan and see if it finds the ip of the bbb.
+* (osx) start LanScan, select interface in lower left corner (use bridge if internet sharing), press space to scan and see if it finds the ip of the bbb.
 * when you have the ip, start terminal and try to log in via ssh...
 * `ssh debian@192.168.2.4` # note that the ip might be different
 * the default password is `debian`.

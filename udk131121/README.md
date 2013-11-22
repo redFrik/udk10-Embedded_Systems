@@ -122,3 +122,4 @@ And stop with ctrl+c
 //--links:
 ----------
 * <http://supercollider.github.io/development/building-beagleboneblack.html> here i put the same thing but a bit simplified
+* <http://learnpythonthehardway.org/book/>

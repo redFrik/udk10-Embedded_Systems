@@ -123,3 +123,4 @@ And stop with ctrl+c
 ----------
 * <http://supercollider.github.io/development/building-beagleboneblack.html> here i put the same thing but a bit simplified
 * <http://learnpythonthehardway.org/book/>
+* <http://www.eliteraspberries.com/blog/2013/09/installing-debian-on-the-beaglebone-black.html> more advanced info about installing debian on bbb

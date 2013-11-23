@@ -86,15 +86,21 @@ When all the above is working i'd recommend to do a backup of your sd card.  On 
 -----------------
 To run supercollider code from a textfile, you write the code on your laptop, save it to a .scd file and copy it over.
 
-1. `jackd -dalsa -dhw:1,0 -p128 -n3 -s &`
-2. `sclang mycode.scd`
-
 A simple example .scd file could look like this...
 ```
 s.waitForBoot({
 	a= {SinOsc.ar([400, 404], 0, 0.1)}.play;
 });
 ```
+
+You can copy files with the scp command. Example:
+`scp mycode.scd debian@192.168.1.54:/home/debian/` # run from your laptop
+This will copy the file mycode.scd from current directory over to the bbb and put it in the debian home folder.
+
+To run the file on the bbb do the following...
+
+1. `jackd -dalsa -dhw:1,0 -p128 -n3 -s &`
+2. `sclang mycode.scd`
 
 //--extra
 ---------

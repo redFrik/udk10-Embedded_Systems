@@ -18,11 +18,11 @@ Optional - if you have a wlan usb stick like [this](http://www.reichelt.de/WLAN-
 * `sudo apt-get install firmware-ralink firmware-realtek`
 * `sudo pico /etc/network/interfaces`
 * edit the last four lines to say...
-`auto wlan0`
-`iface wlan0 inet dhcp`
-	`wpa-ssid "your_wlan_name"`
-	`wpa-psk "your_wlan_pass"`
-	`wireless-power off`
+```auto wlan0
+iface wlan0 inet dhcp
+	wpa-ssid "your_wlan_name"
+	wpa-psk "your_wlan_pass"
+	wireless-power off```
 * `sudo ifdown wlan0`
 * `sudo ifup wlan0`
 

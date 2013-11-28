@@ -21,7 +21,7 @@ Copy the two files [osctest.py](https://raw.github.com/redFrik/udk10-Embedded_Sy
 
 Start jack if it isn't already running...
 
-* `jackd -dalsa -dhw:1,0 -p128 -n3 -s &`
+* `jackd -dalsa -dhw:1,0 -p1024 -n3 -s &`
 
 Start osctest with...
 

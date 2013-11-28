@@ -56,7 +56,7 @@ This builds and installs supercollider...
 ------------
 Finally we can start sc and make sound.
 
-1. `jackd -dalsa -dhw:1,0 -p128 -n3 -s &`
+1. `jackd -dalsa -dhw:1,0 -p1024 -n3 -s &`
 2. `sclang` # ignore the error "ERROR: No GUI scheme active" - it is harmless.
 3. `s.boot;`
 4. `a= {SinOsc.ar([400, 404], 0, 0.1)}.play;`
@@ -65,6 +65,8 @@ Finally we can start sc and make sound.
 7. `s.quit;`
 8. `0.exit;`
 9. `pkill jackd`
+
+Note: if the sound is distorted you may need to reboot and try again.
 
 //--get low latency audio
 -------------------------
@@ -77,6 +79,8 @@ To run jack in realtime and get lower latency (faster response in the sound), yo
 5.    `@audio - nice -19`
 6. save and exit with ctrl+o, ctrl+x
 7. `sudo reboot` # after reboot start sc again like in previous step
+
+Note: to get low latency you'll need to decrease the blocksize when you start jack. Try with `-p128` instead of `-p1024` and listen if you have a clean undistorted sound. You can also try `-p256` or `-p512` if 128 is too low.
 
 //--backup
 ----------
@@ -99,7 +103,7 @@ This will copy the file mycode.scd from current directory over to the bbb and pu
 
 To run the file on the bbb do the following...
 
-1. `jackd -dalsa -dhw:1,0 -p128 -n3 -s &`
+1. `jackd -dalsa -dhw:1,0 -p1024 -n3 -s &`
 2. `sclang mycode.scd`
 
 //--extra

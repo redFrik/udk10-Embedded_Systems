@@ -3,11 +3,43 @@
 
 _beaglebone black supercollider together with python_
 
-scp
+//--copy files from laptop to bbb
+---------------------------------
+One way is to use scp. It stands for Secure CoPy and is built in to both your laptop (osx/linux) and the bbb (linux).
 
-osc
+* on your laptop change to a directory (`cd`) where you have a file you'd like to copy to your bbb. Or create a temporary file with `echo "test" >> scptest.txt`
+* `scp scptest.txt debian@192.168.1.53:/home/debian` # replace filename and ip
+* now on the bbb cd to home directory (`cd ~`) and do `ls`. The file should be there
+* `rm scptest.txt` # run on both laptop and bbb to delete the file
 
-etc
+//--sending osc from python to sc
+---------------------------------
+Copy the two files [osctest.py](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131128/osctest.py) and [readsensors1.py](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131128/readsensor1.py) to the bbb.
+
+* `scp osctest.py debian@192.168.1.53:/home/debian`
+* `scp readsensors1.py debian@192.168.1.53:/home/debian`
+
+Start jack if it isn't already running...
+
+* `jackd -dalsa -dhw:1,0 -p128 -n3 -s &`
+
+Start osctest with...
+
+* `python osctest.py &`
+* `sclang`
+* `OSCFunc.trace(true)` # this should start posting incoming 111 osc message once per second.
+
+* `0.exit`
+* `pkill python`
+
+Start readsensors1 with...
+
+* `sudo python readsensors1.py &` # we need sudo because of gpio access
+* `sclang`
+* `OSCFunc.trace(true)` # again this should start posting a lot of incoming osc messages
+
+* `0.exit`
+* `sudo pkill python`
 
 //--extra
 ---------
@@ -38,5 +70,4 @@ To connect the usb soundcard and wlan usb adapter at the same time, you'll need 
 
 //--links
 ---------
-* <http://www.cyberciti.biz/faq/debian-linux-wpa-wpa2-wireless-wifi-networking/>
-
+* <http://www.cyberciti.biz/faq/debian-linux-wpa-wpa2-wireless-wifi-networking/> (advanced)

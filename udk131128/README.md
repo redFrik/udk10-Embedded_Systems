@@ -14,7 +14,7 @@ One way is to use scp. It stands for Secure CoPy and is built in to both your la
 
 //--sending osc from python to sc
 ---------------------------------
-Copy the two files [osctest.py](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131128/osctest.py) and [readsensors1.py](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131128/readsensor1.py) to the bbb.
+Copy the two files [osctest.py](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131128/osctest.py) and [readsensors1.py](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131128/readsensors1.py) to the bbb.
 
 * `scp osctest.py debian@192.168.1.53:/home/debian`
 * `scp readsensors1.py debian@192.168.1.53:/home/debian`

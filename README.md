@@ -16,7 +16,7 @@ dates
 - [ ] 07nov: **NO CLASS**
 - [x] [14nov 14-16](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131114): beaglebone black overview, debian setup and installation
 - [x] [21nov 14-16](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131121): beaglebone black setup sound and install supercollider
-- [ ] [28nov 14-16](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131128): beaglebone black supercollider together with python
+- [x] [28nov 14-16](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131128): beaglebone black supercollider together with python
 - [ ] [05dec 14-16]
 - [ ] [12dec 14-16]
 - [ ] [19dec 14-16]

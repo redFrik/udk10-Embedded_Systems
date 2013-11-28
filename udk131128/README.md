@@ -41,7 +41,7 @@ Start readsensors1 with...
 * `0.exit`
 * `sudo pkill python`
 
-Now connect sensors to the pins listed in the readsensors python code. See pin connection diagram here... [http://cholla.mmto.org/computers/beagle/beaglebone_pinout1-1024x585.png](http://cholla.mmto.org/computers/beagle/beaglebone_pinout1-1024x585.png)
+Now connect sensors to the pins listed in the readsensors python code. See pin connection diagram here... [http://cholla.mmto.org/computers/beagle/beaglebone_pinout1-1024x585.png](http://cholla.mmto.org/computers/beagle/beaglebone_pinout1-1024x585.png) and also see instructions two weeks ago [here](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131114#--second-python-program)
 
 //--extra
 ---------

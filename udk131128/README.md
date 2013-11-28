@@ -41,6 +41,8 @@ Start readsensors1 with...
 * `0.exit`
 * `sudo pkill python`
 
+Now connect sensors to the pins listed in the readsensors python code. See pin connection diagram here... [http://cholla.mmto.org/computers/beagle/beaglebone_pinout1-1024x585.png](http://cholla.mmto.org/computers/beagle/beaglebone_pinout1-1024x585.png)
+
 //--extra
 ---------
 Optional - if you have a wlan usb stick like [this](http://www.reichelt.de/WLAN-Adapter/LOGILINK-WL0084B/3/index.html?&ACTION=3&LA=5&ARTICLE=120745&GROUPID=770&artnr=LOGILINK+WL0084B)

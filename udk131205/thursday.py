@@ -37,12 +37,12 @@ def main():
 	while True:
 		for sensor in analog_sensors:
 			val= int(ADC.read_raw(sensor)) # 0-1799
-			if last[sensor]!=val:
+			if last.get(sensor, None)!=val:
 				sendOSC("/ana", sensor, val)
 				last[sensor]= val # store sensor value
 		for sensor in digital_sensors:
 			val= GPIO.input(sensor) # 0-1
-			if last[sensor]!=val:
+			if last.get(sensor, None)!=val:
 				sendOSC("/dig", sensor, val)
 				last[sensor]= val # store sensor value
 		time.sleep(update_rate)

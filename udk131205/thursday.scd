@@ -4,7 +4,7 @@
 s.waitForBoot{
 
 	//--jingle (customize or remove)
-	{LFTri.ar(LFSaw.ar([18,20])*100+500,0,Line.kr(0.5, 0, 3, doneAction:2))}.play;
+	{LFTri.ar(LFPulse.ar([12,20])*300+600, 0, EnvGen.kr(Env.sine(3, 0.5), doneAction:2))}.play;
 
 	//--osc input
 	OSCFunc({|msg| msg.postln}, \ana);

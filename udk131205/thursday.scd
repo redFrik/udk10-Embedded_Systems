@@ -18,17 +18,18 @@ s.waitForBoot{
 
 	//--main synth
 	Ndef(\thursday).play;
-	Ndef(\thursday, {|p9_39= 900, p9_40= 900, p9_41= 0, p9_42= 0|
+	Ndef(\thursday, {
+		|p9_39= 900, p9_40= 900, p9_41= 0, p9_42= 0| //arguments - add more
 
-		//--make variables from arguments
-		var a0= p9_39;
-		var a1= p9_40;
-		var d0= p9_41;
-		var d1= p9_42;
+		//--make variables from arguments - add more below
+		var a0= p9_39;//analog 0
+		var a1= p9_40;//analog 1
+		var d0= p9_41;//digital 0
+		var d1= p9_42;//digital 1
 
 		//--map controllers - customize here
 		var freq0= 400;
-		var amp0= a1;
+		var amp0= a1.lag(0.1);
 		var freq1= 500;
 		var amp1= 200;
 		var freq2= 600;

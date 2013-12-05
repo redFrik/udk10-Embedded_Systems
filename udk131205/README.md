@@ -12,11 +12,13 @@ The 'instrument' consists of two programs. One written in python and the other o
 First log in to you beaglebone black and get the two files thursday.py and thursday.scd.
 Either copy them from your laptop with scp (see [last week](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131128#--copy-files-from-laptop-to-bbb)), or get them directly from github like this...
 
-* `wget http://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131205/thursday.py`
-* `wget http://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131205/thursday.scd`
+* `wget https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131205/thursday.py`
+* `wget https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131205/thursday.scd`
 * `ls` # list directory and show the files - double check that they are there
 
 Note: you can use the -N flag if you wish to overwrite the file
+
+Note: if you get the 'WARNING: The certificate of raw.github.com is not trusted.' then set the wget flag `--no-check-certificate`.
 
 //--starting the instrument
 ---------------------------

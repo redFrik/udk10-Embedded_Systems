@@ -9,11 +9,11 @@ s.waitForBoot{
 	//--osc input
 	OSCFunc({|msg|
 		//msg.postln;//debug
-		Ndef(\thursday).set(msg[1], msg[2].toLower);
+		Ndef(\thursday).set(msg[1].asString.toLower.asSymbol, msg[2]);
 	}, \ana);
 	OSCFunc({|msg|
 		//msg.postln;//debug
-		Ndef(\thursday).set(msg[1], msg[2].toLower);
+		Ndef(\thursday).set(msg[1].asString.toLower.asSymbol, msg[2]);
 	}, \dig);
 
 	//--main synth
@@ -47,5 +47,5 @@ s.waitForBoot{
 		z!2;
 	});
 
-	//Ndef(\thursday).gui
+	//Ndef(\thursday).gui //for testing on laptop
 };

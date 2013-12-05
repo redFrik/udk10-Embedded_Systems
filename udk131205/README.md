@@ -35,16 +35,18 @@ Also note that if you get the 'WARNING: The certificate of raw.github.com is not
 Make sure an usb sound adapter is connected.
 
 * `jackd -dalsa -dhw:1,0 -p1024 -n3 -s &`
-* `sudo python thursday.py &`
+* `sudo -b python thursday.py`
 * `sclang thursday.scd`
 
-That should start sc and play a little startup jingle.
+That should start sc and play a little startup jingle. And then you should be able to connect sensors and make noise. Stop with ctrl+c.
 
 //--connect sensors
 -------------------
 This thursday 'instrument' uses by default two analog and two digital sensors. To play you'll need to connect digital sensors (buttons/switches etc) to P9_41 and P9_42, and analog sensors (pots/sliders/light etc) to P9_39 and P9_40.
 
 Note: be extra careful when connecting. If you connect sensors to the wrong place (5v), it can DESTROY the board. Double check and make sure you have the right side up etc.
+
+Also note that it's usually safest to turn off the beaglebone first before making the connections.
 
 ![thursdayHardware](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131205/thursdayHardware.gif)
 

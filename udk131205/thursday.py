@@ -2,7 +2,7 @@
 #see https://github.com/redFrik/udk10-Embedded_Systems
 
 #this will read analog and digital sensors and send osc data locally to sc
-#start it with 'sudo python thursday.py'
+#start it with 'sudo python thursday.py &'
 
 import Adafruit_BBIO.ADC as ADC
 import Adafruit_BBIO.GPIO as GPIO
@@ -10,10 +10,11 @@ import time
 import OSC
 
 #-- settings
+analog_sensors= ["P9_39", "P9_40"] # customize here and add your own sensors
+digital_sensors= ["P9_41", "P9_42"] # customize here  and add your own sensors
 update_rate= 0.05 # time in seconds between each reading
-analog_sensors= ["P9_39", "P9_40"]
-digital_sensors= ["P9_41", "P9_42"]
 
+#-- init
 ADC.setup()
 for sensor in digital_sensors:
 	GPIO.setup(sensor, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
@@ -32,13 +33,18 @@ def sendOSC(address, name, val):
 	#print msg # debug
 
 def main():
+	last= {} # remember sensor values in a dict
 	while True:
 		for sensor in analog_sensors:
 			val= int(ADC.read_raw(sensor)) # 0-1799
-			sendOSC("/ana", sensor, val)
+			if last[sensor]!=val:
+				sendOSC("/ana", sensor, val)
+				last[sensor]= val # store sensor value
 		for sensor in digital_sensors:
-			val= GPIO.input(sensor)
-			sendOSC("/dig", sensor, val)
+			val= GPIO.input(sensor) # 0-1
+			if last[sensor]!=val:
+				sendOSC("/dig", sensor, val)
+				last[sensor]= val # store sensor value
 		time.sleep(update_rate)
 
 if __name__=='__main__':

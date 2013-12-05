@@ -36,14 +36,55 @@ Note: be extra careful when connecting. If you connect sensors to the wrong plac
 
 ![thursdayHardware](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131205/thursdayHardware.gif)
 
+Now one of the two digital sensors should be starting and stopping the sound (by controlling the amplitude), and the other sensors set different parameters that changes the sound. The sound is a fm-synth.
+
 //--customizing the sound
 -------------------------
+The mapping of sensor values to sound parameters can be easily changed. So if you like the exchange sensors or have different functionality, you can just edit the scd file in supercollider (using pico locally or edit it on your laptop and then upload via scp).
 
+This part of the code is for mapping. Edit some things there and change values to see what happens.
+```
+//--map controllers - customize here
+var freq0= 400;
+var amp0= a1.lag(0.1);
+var freq1= 500;
+var amp1= 200;
+var freq2= 600;
+var amp2= d0.lag2(0.1)*300;
+var freq3= (a0*10).lag(1);
+var amp3= 800;
+var amp= d1.lagud(0.01, 0.5);
+```
 
+If you know supercollider you can of course write your own sound synthesis from scratch.
 
 //--customizing the hardware
 ----------------------------
+You can also easily add more sensors. Then change in the thursday.py file and add the ones you need under settings.
 
+```
+//adding 2 more analog and 1 more digital...
+analog_sensors= ["P9_39", "P9_40", "P9_37", "P9_38"] # customize here and add your own sensors
+digital_sensors= ["P9_41", "P9_42", "P9_31"] # customize here  and add your own sensors
+``
+
+and then you also need to change in the thursday.scd file and add the inputs there...
+
+```
+//also here adding 2 analog and 1 digital
+|p9_39= 900, p9_40= 900, p9_37= 900, p9_38= 900, p9_41= 0, p9_42= 0, p9_31= 0| //arguments - add more
+
+//--make variables from arguments - add more below
+var a0= p9_39;//analog 0
+var a1= p9_40;//analog 1
+var a2= p9_37;//analog 2
+var a3= p9_38;//analog 3
+var d0= p9_41;//digital 0
+var d1= p9_42;//digital 1
+var d2= p9_31;//digital 2
+```
+
+See the schematics for pin numbers. (Note that some pins might not be available - read up on overlay and search online forums)
 
 //--quitting
 ------------

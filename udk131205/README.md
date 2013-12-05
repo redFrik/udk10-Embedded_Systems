@@ -7,6 +7,11 @@ The below instructions assume you've installed debian, python libraries, alsa, j
 
 The 'instrument' consists of two programs. One written in python and the other one in supercollider. Both programs must run on the beaglebone black at the same time for it all to work. The python program (called thursday.py) is reading inputs from sensors and then, if any values changed, sends osc data to supercollider (called thursday.scd). Both programs are templates and you should be able to modify them easily to suit your needs (number of sensors and sound synthesis).
 
+//--fm algorithms
+-----------------
+Open and check the file [fm_algorithms1.scd](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131205/fm_algorithms1.scd) from todays files. Try out different patches and note the difference in connection/sound.
+Try to replace `.add` with `.draw` to see a graphical overview over the oscillators. You will first need to install the rd_dot quark and graphviz (<http://www.graphviz.org>). I use version 2.30.1.
+
 //--download files to bbb
 -------------------------
 First log in to you beaglebone black and get the two files thursday.py and thursday.scd.
@@ -68,7 +73,7 @@ You can also easily add more sensors. Then change in the thursday.py file and ad
 //adding 2 more analog and 1 more digital...
 analog_sensors= ["P9_39", "P9_40", "P9_37", "P9_38"] # customize here and add your own sensors
 digital_sensors= ["P9_41", "P9_42", "P9_31"] # customize here  and add your own sensors
-``
+```
 
 and then you also need to change in the thursday.scd file and add the inputs there...
 

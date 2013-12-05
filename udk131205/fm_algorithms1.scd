@@ -1,6 +1,10 @@
 //redFrik
 //fm synths with 3 modulating oscillators
 
+//try to replace .add with .draw to see the schematics
+//you'll need the rd_dot quark (+ Graphviz)
+//Quarks.gui
+
 s.boot
 
 /////////////// fm algo 00

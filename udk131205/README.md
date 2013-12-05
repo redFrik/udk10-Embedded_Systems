@@ -16,6 +16,8 @@ Either copy them from your laptop with scp (see [last week](https://github.com/r
 * `wget http://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131205/thursday.scd`
 * `ls` # list directory and show the files - double check that they are there
 
+Note: you can use the -N flag if you wish to overwrite the file
+
 //--starting the instrument
 ---------------------------
 Make sure an usb sound adapter is connected.

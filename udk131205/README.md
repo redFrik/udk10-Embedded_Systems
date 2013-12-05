@@ -5,12 +5,16 @@ _beaglebone black as a standalone supercollider instrument_
 
 The below instructions assume you've installed debian, python libraries, alsa, jack and supercollider. See previous weeks: [debian+python](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131114#--preparation-first-time-only) and [alsa+jack+sc](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131121#--install-alsa--test-sound).
 
-The 'instrument' consists of two programs. One written in python and the other one in supercollider. Both programs must run on the beaglebone black at the same time for it all to work. The python program (called thursday.py) is reading inputs from sensors and then, if any values changed, sends osc data to supercollider (called thursday.scd). Both programs are templates and you should be able to modify them easily to suit your needs (number of sensors and sound synthesis).
+The 'instrument' consists of two programs. One written in python and the other one in supercollider. Both programs must run on the beaglebone black at the same time for it all to work. The python program (called thursday.py) is reading inputs from sensors and then, if any values changed, sends osc data to a supercollider program (called thursday.scd). Both programs are templates and you should be able to modify them easily to suit your needs (number of sensors and sound synthesis).
 
 //--fm algorithms
 -----------------
+First an introduction to frequency modulation (fm).
+
 Open and check the file [fm_algorithms1.scd](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131205/fm_algorithms1.scd) and [fm_algorithms2.scd](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131205/fm_algorithms2.scd) from todays files. Try out different patches and note the difference in connection/sound.
+
 Try to replace `.add` with `.draw` to see a graphical overview over the oscillators. You will first need to install the rd_dot quark and graphviz (<http://www.graphviz.org>). I use version 2.30.1.
+To install the rd_dot quark you'd type... `Quarks.install("rd_dot");` in supercollider (on your laptop) and then press 'p' when asked. Then if it installed successfully, recompile sclang. Test that it is working with `{SinOsc.ar}.draw;`. That should open a window in graphviz displaying a connection diagram. On mac osx you might need to make all filetypes .dot open in graphviz. Do this by selecting a .dot file and get info in finder - select open with... graphviz and apply for every file.
 
 //--download files to bbb
 -------------------------

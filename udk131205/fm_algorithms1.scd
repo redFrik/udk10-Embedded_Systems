@@ -1,6 +1,8 @@
 //redFrik
 //fm synths with 3 modulating oscillators
 
+//note: there is a big difference if using integer vs floats: Pwhite(0, 9999.9, inf) vs Pwhite(0, 9999, inf)
+
 //try to replace .add with .draw to see the schematics
 //you'll need the rd_dot quark (+ Graphviz)
 //Quarks.gui

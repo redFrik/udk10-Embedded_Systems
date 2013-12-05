@@ -9,7 +9,7 @@ The 'instrument' consists of two programs. One written in python and the other o
 
 //--fm algorithms
 -----------------
-Open and check the file [fm_algorithms1.scd](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131205/fm_algorithms1.scd) from todays files. Try out different patches and note the difference in connection/sound.
+Open and check the file [fm_algorithms1.scd](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131205/fm_algorithms1.scd) and [fm_algorithms2.scd](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131205/fm_algorithms2.scd) from todays files. Try out different patches and note the difference in connection/sound.
 Try to replace `.add` with `.draw` to see a graphical overview over the oscillators. You will first need to install the rd_dot quark and graphviz (<http://www.graphviz.org>). I use version 2.30.1.
 
 //--download files to bbb

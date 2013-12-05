@@ -29,7 +29,8 @@ That should start sc and play a little test jingle.
 //--connect sensors
 -------------------
 This thursday 'instrument' uses by default two analog and two digital sensors. To play you'll need to connect digital sensors (buttons/switches etc) to P9_41 and P9_42, and analog sensors (pots/sliders/light etc) to P9_39 and P9_40.
-![thursdayHardware](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131205/thursdayHardware.png)
+
+![thursdayHardware](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131205/thursdayHardware.gif)
 
 //--customizing the sound
 -------------------------

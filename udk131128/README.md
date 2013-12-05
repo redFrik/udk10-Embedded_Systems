@@ -34,7 +34,7 @@ Start osctest with...
 
 Start readsensors1 with...
 
-* `sudo python readsensors1.py &` # we need sudo because of gpio access
+* `sudo -b python readsensors1.py` # we need sudo because of gpio access
 * `sclang`
 * `OSCFunc.trace(true)` # again this should start posting a lot of incoming osc messages
 

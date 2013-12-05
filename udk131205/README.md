@@ -9,25 +9,26 @@ The 'instrument' consists of two programs. One written in python and the other o
 
 //--fm algorithms
 -----------------
-First an introduction to frequency modulation ([fm](http://en.wikipedia.org/wiki/Fm_synth)).
+First an introduction to frequency modulation ([fm](http://en.wikipedia.org/wiki/Fm_synth)):
 
-On your laptop, open and check the file [fm_algorithms1.scd](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131205/fm_algorithms1.scd) and [fm_algorithms2.scd](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131205/fm_algorithms2.scd) from todays files. Try out different patches and note the difference in how the oscillators are connected.
+On your laptop, open and check the files [fm_algorithms1.scd](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131205/fm_algorithms1.scd) and [fm_algorithms2.scd](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131205/fm_algorithms2.scd) from todays material. Try out different patches and note the difference in how the oscillators are connected.
 
 Try to replace `.add` with `.draw` to see a graphical overview over the oscillators. You will first need to install the rd_dot quark and graphviz (<http://www.graphviz.org>). I use version 2.34 on my mac osx 10.9.
-To install the rd_dot quark you'd type... `Quarks.install("rd_dot");` in supercollider (on your laptop) and then press 'p' when asked. Then if it installed successfully, recompile sclang. Test that it is working with `{SinOsc.ar}.draw;`. That should open a window in graphviz displaying a connection diagram. On mac osx you might need to make all filetypes .dot open in graphviz. Do this by selecting a .dot file and get info in finder - select open with... graphviz and apply for every file.
+
+To install the rd_dot quark you'd type... `Quarks.checkoutAll` and `Quarks.install("rd_dot");` in supercollider (on your laptop) and then press 'p' when asked by the Terminal. Then if it worked and installed successfully, recompile sclang. Test it with `{SinOsc.ar}.draw;`. That line should have opened a window in graphviz that shows a connection diagram. Note: on mac osx you might need to force all filetypes of the type .dot open in graphviz. Do this by selecting a .dot file and get info in Finder - select open with... graphviz and apply for every file.
 
 //--download files to bbb
 -------------------------
-First log in to you beaglebone black and get the two files thursday.py and thursday.scd.
+First log in to your beaglebone black and get the two files thursday.py and thursday.scd onto there.
 Either copy them from your laptop with scp (see [last week](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131128#--copy-files-from-laptop-to-bbb)), or get them directly from github like this...
 
 * `wget https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131205/thursday.py`
 * `wget https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131205/thursday.scd`
 * `ls` # list directory and show the files - double check that they are there
 
-Note: you can use the -N flag if you wish to overwrite the file
+Note: you can use the -N flag if you wish to overwrite an old file with the same name.
 
-Note: if you get the 'WARNING: The certificate of raw.github.com is not trusted.' then set the wget flag `--no-check-certificate`.
+Also note that if you get the 'WARNING: The certificate of raw.github.com is not trusted.' message, then set the wget flag `--no-check-certificate`.
 
 //--starting the instrument
 ---------------------------
@@ -47,13 +48,14 @@ Note: be extra careful when connecting. If you connect sensors to the wrong plac
 
 ![thursdayHardware](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131205/thursdayHardware.gif)
 
-Now one of the two digital sensors should be starting and stopping the sound (by controlling the amplitude), and the other sensors set different parameters that changes the sound. The sound is a fm-synth.
+Now one of the two digital sensors should be starting and stopping the sound (by controlling the amplitude), and the other sensors set different parameters that changes the sound. The sound is a fm-synth based on one of the the fm_algorithms above.
 
 //--customizing the sound
 -------------------------
-The mapping of sensor values to sound parameters can be easily changed. So if you like the exchange sensors or have different functionality, you can just edit the scd file in supercollider (using pico locally or edit it on your laptop and then upload via scp).
+The mapping of sensor values to sound parameters can be easily changed. You can exchange sensors or give them different functionality by editing the scd file in supercollider (using pico locally or edit it on your laptop and then upload via scp).
 
 This part of the code is for mapping. Edit some things there and change values to see what happens.
+
 ```
 //--map controllers - customize here
 var freq0= 400;
@@ -61,20 +63,19 @@ var amp0= a1.lag(0.1);
 var freq1= 500;
 var amp1= 200;
 var freq2= 600;
-var amp2= d0.lag2(0.1)*300;
-var freq3= (a0*10).lag(1);
+var amp2= (d0+0.1).lag2(0.1)*300;
+var freq3= a0.lag(1);
 var amp3= 800;
 var amp= d1.lagud(0.01, 0.5);
 ```
 
-If you know supercollider you can of course write your own sound synthesis from scratch.
+If you know supercollider you can of course write your own sound synthesis from scratch, or adapt some old code you have.
 
 //--customizing the hardware
 ----------------------------
-You can also easily add more sensors. Then change in the thursday.py file and add the ones you need under settings.
+You can also easily add more sensors. Then change in the thursday.py file and add the ones you need under settings. Here we add two more analog (total 4) and 1 more digital (total 3)...
 
 ```
-//adding 2 more analog and 1 more digital...
 analog_sensors= ["P9_39", "P9_40", "P9_37", "P9_38"] # customize here and add your own sensors
 digital_sensors= ["P9_41", "P9_42", "P9_31"] # customize here  and add your own sensors
 ```
@@ -95,7 +96,7 @@ var d1= p9_42;//digital 1
 var d2= p9_31;//digital 2
 ```
 
-See the schematics for pin numbers. (Note that some pins might not be available - read up on overlay and search online forums)
+See the schematics for pin numbers. (Note that some pins might not be available - read up on overlay online if some pin doesn't work)
 
 //--quitting
 ------------

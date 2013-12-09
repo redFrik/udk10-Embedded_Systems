@@ -18,14 +18,14 @@ dates
 - [x] [21nov 14-16](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131121): beaglebone black setup sound and install supercollider
 - [x] [28nov 14-16](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131128): beaglebone black supercollider together with python
 - [x] [05dec 14-16](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131205): beaglebone black as a standalone supercollider instrument
-- [ ] [12dec 14-16](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131212): arduino and supercollider together plus sensors
-- [ ] [19dec 14-16] more about sensors, arduino and the beaglebone black
+- [ ] [12dec 14-16](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131212): arduino and supercollider together plus sensors, prepare own projects
+- [ ] [19dec 14-16](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131219): more about sensors, arduino and the beaglebone black, prepare own projects
 - [ ] 26dec: **NO CLASS**
 - [ ] 02jan: **NO CLASS**
-- [ ] [09jan 14-17] mainly own projects
-- [ ] [16jan 14-17] mainly own projects
-- [ ] [23jan 14-17] mainly own projects
-- [ ] [06feb 14-17] mainly own projects
+- [ ] [09jan 14-17] own projects
+- [ ] [16jan 14-17] own projects
+- [ ] [23jan 14-17] own projects
+- [ ] [06feb 14-17] own projects
 - [ ] 13feb: **NO CLASS**
 
 links to previous semesters... <http://redfrik.github.io/udk00-Audiovisual_Programming/>

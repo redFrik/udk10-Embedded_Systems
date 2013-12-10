@@ -23,11 +23,11 @@ To make a python program automatically start when you power on the beaglebone bl
 * `sudo pico /etc/rc.local`
 * place the cursor somewhere before the `exit 0` line and type...
 * `(sleep 5; python /home/debian/led_6channel_test.py) &` # edit to match the name of the file you want to autoload (no need with sudo, rc.local is already running as sudo)
-* to stop, either set up a GPIO pin with a button that turns the system off, or log in with ssh and do `sudo pkill python`
+* to stop, either set up a GPIO pin with a button that turns the system off (see below), or log in with ssh and do `sudo pkill python`
 
 //--autostart jack and sc
 -------------------------
-To auto start a supercollider patch is a little bit more involved and then you can for example do that with a bash script.
+To auto start a supercollider patch is a little bit more involved (jack need to run first etc) and then it is better to use a bash script.
 
 * `cd /home/debian`
 * `pico autostart_test`
@@ -40,11 +40,14 @@ sleep 1
 su debian -c "sclang /home/debian/autostart_test.scd"
 ```
 
+Now we have a bash script that will start jack and sclang after each other. Next we need to launch this script at startup. Here is one of the simpler ways to do that...
+
 * `sudo pico /etc/rc.local`
 * place the cursor somewhere before the `exit 0` line and type...
 * `(sleep 5; /bin/bash /home/debian/autostart_test) &`
-* last we create a supercollider test file called `autostart_test.scd` (same as in the bash script above)
+* last create a supercollider test file called `autostart_test.scd` (same as in the bash script above) and use `s.waitForBoot` to start scserver.
 * `pico autostart_test.scd`
+* add the following sc code, save and exit
 
 ```
 s.waitForBoot{
@@ -53,8 +56,18 @@ s.waitForBoot{
 ```
 
 * `sudo reboot` # jack and sc should start automatically after a while
-* to stop log in with ssh and do `sudo pkill jackd`
+* to stop log in with ssh and do `sudo pkill jackd` (or use a pin like described below)
 
+//--turning off with a button
+-----------------------------
+TODO
+
+```
+def shutdown():
+        close()
+        os.system("sudo halt")
+        exit()
+```
 
 //--extra (advanced)
 --------------------

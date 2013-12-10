@@ -40,12 +40,12 @@ sleep 1
 su debian -c "sclang /home/debian/autostart_test.scd"
 ```
 
-Now we have a bash script that will start jack and sclang after each other. Next we need to launch this script at startup. Here is one of the simpler ways to do that...
+Now we have a bash script that will start jack and sclang after each other. Next we need to launch this script at startup. Here is one of the simpler ways of doing that...
 
 * `sudo pico /etc/rc.local`
 * place the cursor somewhere before the `exit 0` line and type...
 * `(sleep 5; /bin/bash /home/debian/autostart_test) &`
-* last create a supercollider test file called `autostart_test.scd` (same as in the bash script above) and use `s.waitForBoot` to start scserver.
+* last we should create a supercollider test file called `autostart_test.scd` (same as in the bash script above) and use `s.waitForBoot` to start scserver:
 * `pico autostart_test.scd`
 * add the following sc code, save and exit
 

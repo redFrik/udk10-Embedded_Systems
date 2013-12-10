@@ -18,7 +18,7 @@ _more about sensors, arduino, beaglebone black, twitter, prepare own projects_
 
 //--autostart
 -------------
-To make something automatically start when you power on the beaglebone black, you can do edit the rc.local file.
+To make a python program automatically start when you power on the beaglebone black, you can do edit the rc.local file and launch the py file from there.
 
 * `sudo pico /etc/rc.local`
 * place the cursor somewhere before the `exit 0` line and type...
@@ -31,16 +31,28 @@ To auto start a supercollider patch is a little bit more involved and then you c
 
 * `cd /home/debian`
 * `pico autostart_test`
-* add the following and press ctrl+o to save and ctrl+x to exit
+* add the following (and press ctrl+o to save and ctrl+x to exit as usual)
+
 ```
 #!/bin/bash
 su debian -c "jackd -dalsa -dhw:1,0 -p1024 -n3 -s &"
 sleep 1
 su debian -c "sclang /home/debian/autostart_test.scd"
 ```
+
 * `sudo pico /etc/rc.local`
 * place the cursor somewhere before the `exit 0` line and type...
 * `(sleep 5; /bin/bash /home/debian/autostart_test) &`
+* last we create a supercollider test file called `autostart_test.scd` (same as in the bash script above)
+* `pico autostart_test.scd`
+
+```
+s.waitForBoot{
+        {SinOsc.ar([400, 404], 0, 0.1)}.play;
+};
+```
+
+* `sudo reboot` # jack and sc should start automatically after a while
 * to stop log in with ssh and do `sudo pkill jackd`
 
 

@@ -62,7 +62,7 @@ additional stuff if you want to use it like a standalone computer...
 //--basic preparation and startup
 --------------------
 you will need to do a few things before booting the pi for the first time...
-* download an operating system (here we will use Raspbian)
+* download an operating system (here we will use [Raspbian](http://www.raspberrypi.org/downloads))
 * put the os on a sd card (on osx it is easiest with Pi Filler <http://ivanx.com/raspberrypi/>)
 * connect ethernet and 5v power to the pi
 * find the ip address of the rpi (on osx it is easy with the free app lanscan <http://www.iwaxx.com/lanscan/>), or look in your router settings (web admin/settings pages).

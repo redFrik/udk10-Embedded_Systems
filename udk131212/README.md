@@ -213,7 +213,7 @@ Note: serial data is put in a buffer or cue. Try to type something like `ABABABB
 ==============================
 Instead of the serial monitor used above we can do the same with supercollider. Or any program that can open a serialport like python, max, pd, processing etc.
 
-So with the last sketch loaded (`simple analog (pwm) output from serial commands`), try the following in supercollider...
+So with the last sketch loaded (simple analog (pwm) output from serial commands), try the following in supercollider...
 
 ```
 SerialPort.listDevices;//this will post available ports. copy the name from here to the line below
@@ -239,15 +239,15 @@ That should make the led fade in and out repeatedly.
 
 //--reading sensors in sc
 -------------------------
-Upload the `arduinoToSupercollider_simple.ino`, connect something to A0 (or just connect a bare cable to get noise input) and try the two sc programs `arduinoToSupercollider_simple1.scd` and `arduinoToSupercollider_simple2.scd`.
+Upload the [arduinoToSupercollider_simple.ino](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/arduinoToSupercollider_simple.ino), connect something to A0 (or just connect a bare cable to get noise input) and try the two sc programs [arduinoToSupercollider_simple1.scd](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/arduinoToSupercollider_simple1.scd) and [arduinoToSupercollider_simple2.scd](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/arduinoToSupercollider_simple2.scd).
 
-A more advanced example with serial error checking is shown in arduinoToSupercollider_advanced. Upload `arduinoToSupercollider_advanced.ino` and run `arduinoToSupercollider_advanced.scd` in sc.
+A more advanced example with serial error checking is shown in arduinoToSupercollider_advanced. Upload [arduinoToSupercollider_advanced.ino](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/arduinoToSupercollider_advanced.ino) and run [arduinoToSupercollider_advanced.scd](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/arduinoToSupercollider_advanced.scd) in sc.
 
 //--controlling leds from sc
 ----------------------------
-Upload the `supercolliderToArduino_simple.ino`, and connect an led with resistor to pin 6 and test `supercolliderToArduino_simple1.scd` and `supercolliderToArduino_simple2.scd` in supercollider.
+Upload the [supercolliderToArduino_simple.ino](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/supercolliderToArduino_simple.ino), and connect an led with resistor to pin 6 and test [supercolliderToArduino_simple1.scd](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/supercolliderToArduino_simple1.scd) and [supercolliderToArduino_simple2.scd](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/supercolliderToArduino_simple2.scd) in supercollider.
 
-Upload the `supercolliderToArduino_advanced.ino`, and connect 6 leds with resistor to pins 3, 5, 6, 9, 10, 11 and run the examples in `supercolliderToArduino_advanced.scd`.
+Upload the [supercolliderToArduino_advanced.ino](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/supercolliderToArduino_advanced.ino), and connect 6 leds with resistor to pins 3, 5, 6, 9, 10, 11 and run the examples in [supercolliderToArduino_advanced.ino](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/supercolliderToArduino_advanced.scd).
 
 //--preparation for own project
 ===============================

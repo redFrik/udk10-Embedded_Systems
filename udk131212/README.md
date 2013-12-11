@@ -24,7 +24,7 @@ To program the board you'll normally use the arduino ide. Download and install i
 * plug in the arduino board via usb and start the arduino ide (i recommended to use version 1.0.5)
 * select your type of board in the menu Tools/Board (the [RedBoard](https://www.sparkfun.com/products/11575) i have is of type `Arduino Uno`)
 * select the serial port in the menu Tools/Serial Port (mine is called `/dev/tty.usbserial-A101NB76`)
-* type in the following code and press the upload button...
+* type in the following code and click the upload button in the ide...
 
 ```
 void setup() {
@@ -62,7 +62,7 @@ void loop() {
 }
 ```
 
-* if that uploaded without errors, then open the serial monitor (under menu Tools).
+* if that uploaded without errors, then open the serial monitor (in the ide under menu Tools).
 * set the baudrate to 38400 in the popup and you should see something like this...
 
 ![simple_serial_counter](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/simple_serial_counter.png)
@@ -101,7 +101,7 @@ Note: A and B are really the numbers 65 and 66. Compare in supercollider: `65.as
 
 //--analog inputs
 -----------------
-On the standard arduino board there are 6 analog inputs (A0-A5). They read voltage at 10bit resolution (values 0-1023).
+On the standard arduino board there are 6 analog inputs (A0-A5). They read voltage with a 10bit resolution (values 0-1023).
 
 ```
 //simple analog read
@@ -148,8 +148,8 @@ Again open the serial monitor, set baudrate 38400 and type something in the uppe
 
 //--digital outputs
 -------------------
-The pins 2-13 on a standard arduino can also act as outputs (more pins are available on other models, and you can also use 0-1 but that's often used by the serial port).
-So here we will use pin 7 again but change direction and make it blink a led.
+The pins 2-13 on a standard arduino can also act as outputs (more pins are available on other models, and you can also try 0-1 but only if you're not using the serial port).
+So here we will use pin 7 again, but change it's function to an output and make it turn on/off a led.
 
 ```
 //simple digital output from serial commands
@@ -171,7 +171,13 @@ void loop() {
 }
 ```
 
+* connect a resistor (between 100 and 1K) to pin 6
+* connect from the resistor to the long leg of the led
+* connect from the short leg of the led to GND
+
 Open serial port and type capital `A` and the led should start to shine. Type `B` to turn it off.
+
+![simple_digital_outputs](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/simple_digital_outputs.jpg)
 
 //--pwm ("analog") outputs
 --------------------------

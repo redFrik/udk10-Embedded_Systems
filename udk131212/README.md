@@ -258,10 +258,10 @@ Start to think of a project you want to realize and work in jan-feb. Be prepared
 Last a small little arduino project that would actually fit very well on a beaglebone black (there it's easier to run it standalone on batteries and no laptop needed).
 
 * first see <http://www.aaronalai.com/emf-detector>
-* then upload the `scEMF.ino` to your arduino
+* then upload the [scEMF.ino](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/scEMF/scEMF.ino) to your arduino
 * connect a big resistor (3.3M ohm) between A0 and GND
 * connect an antenna also to A0 (around 16cm long solid wire)
-* run the `scEMF.scd` code in supercollider
+* run the [scEMF.scd](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/scEMF.scd) code in supercollider
 * disconnect your laptop charger. this makes the readings better but preferably you should run you arduino on batteries to reduce interference (and then use a bluetooth or wifi module to send data to the laptop).
 
 ![emf](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/scEMF.jpg)

@@ -65,9 +65,9 @@ void loop() {
 * if that uploaded without errors, then open the serial monitor (in the ide under menu Tools).
 * set the baudrate to 38400 in the popup and you should see something like this...
 
-![simple_serial_counter](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/simple_serial_counter.png)
-
 This is the ascii representation of the (8bit) numbers 0-255.
+
+![simple_serial_counter](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/simple_serial_counter.png)
 
 //--digital inputs
 ------------------
@@ -90,14 +90,13 @@ void loop() {
 ```
 
 * connect a wire between pin 7 and GND.
-
-![simple_digital_read](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/simple_digital_read.jpg)
-
 * again open the serial monitor and when you connect / disconnect the wire at pin 7 you should see the character change...
 
 `AAAAAAAAAAAAAAAAAAAAAAAAAAAABBBBBBBBBBBBBBBBBBBBBAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBBBBBBAA`
 
 Note: A and B are really the numbers 65 and 66. Compare in supercollider: `65.asAscii`.
+
+![simple_digital_read](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/simple_digital_read.jpg)
 
 //--analog inputs
 -----------------
@@ -117,12 +116,11 @@ void loop() {
 ```
 
 * connect a potentiometer.  Middle pot pin to A0, outer pot pins to 5V and GND (order doesn't matter).
-
-![simple_analog_read](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/simple_analog_read.jpg)
-
 * the serial monitor should now display characters from the english alphabet depending on what the voltage is on A0.
 
 `AAAAAAAAAAAAAAAAABBBBBBCCCCCDDDEEFFGIJKMNPTVWYYZZZZZZZZZZZZZZZZZZZZZZYXXVUSRQQONMLLKJJI`
+
+![simple_analog_read](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/simple_analog_read.jpg)
 
 //--serial communication (laptop -> arduino)
 --------------------------------------------

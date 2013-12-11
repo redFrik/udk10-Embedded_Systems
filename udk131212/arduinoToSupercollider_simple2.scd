@@ -1,4 +1,4 @@
-//--use with scToArduino_simple.ino
+//--use with arduinoToSupercollider_simple.ino
 //this example controls the playback speed of a soundfile
 
 (

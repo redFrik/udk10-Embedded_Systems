@@ -5,6 +5,8 @@ _arduino and supercollider together plus sensors, prepare own projects_
 
 This time we'll do a little detour and look at [arduino](http://arduino.cc). This to learn more about basic electronics (analog vs digital, sensors, pulse-width modulation (pwm), voltage divider etc).
 
+Note: all the things we do with the arduino you can also do with the beaglebone black. It is just simpler and quicker to use the arduino+laptop combo for these experiments.
+
 //--arduino hardware
 --------------------
 The arduino hardware is a small microcontroller (computer) that you can program to do simple tasks like reading sensors, controls motors, set timers, do simple logic, lo-fi sound etc. Normally it's built with an 8bit atmel mega chip and run off 5 volts, but there are boards with other chips and other voltages.
@@ -124,34 +126,136 @@ void loop() {
 
 //--serial communication (laptop -> arduino)
 --------------------------------------------
-TODO
+We can also send serial data to the arduino board. Here is a simple example that makes the arduino board just add one and send back all the data bytes it receives.
+
+```
+//simple serial receive and send example
+void setup() {
+  Serial.begin(38400);  //open port and set baudrate - must match in laptop
+}
+void loop() {
+  if(Serial.available()) {
+    byte val= Serial.read();
+    Serial.write(val+1);  //increase the value and send it back
+  }
+  delay(1);  //wait 1 millisecond
+}
+```
+
+Again open the serial monitor, set baudrate 38400 and type something in the upper textview. When you press return the arduino should answer back:
+
+`abc` -> `bcd`
 
 //--digital outputs
 -------------------
-TODO
+The pins 2-13 on a standard arduino can also act as outputs (more pins are available on other models, and you can also use 0-1 but that's often used by the serial port).
+So here we will use pin 7 again but change direction and make it blink a led.
+
+```
+//simple digital output from serial commands
+void setup() {
+  Serial.begin(38400);  //open port and set baudrate - must match in laptop
+  pinMode(7, OUTPUT);  //make it an output
+}
+void loop() {
+  if(Serial.available()) {
+    byte val= Serial.read();
+    if(val==65) {  //match 'A'
+      digitalWrite(7, 1);  //turn on led
+    }
+    if(val==66) {  //match 'B'
+      digitalWrite(7, 0);  //turn off led
+    }
+  }
+  delay(1);  //wait 1 millisecond
+}
+```
+
+Open serial port and type capital `A` and the led should start to shine. Type `B` to turn it off.
 
 //--pwm ("analog") outputs
 --------------------------
-TODO
+PWM stands for pulse-width modulation and this can be used to fade leds in an analog fashion. But it's not really correct to call it analog. It is more like pulsating on/off so quickly that it looks like it's half on. See <http://arduino.cc/en/Tutorial/PWM> for a better explanation.
+
+Note that we can only use the pins marked with `~`. So connect a resistor (between 100 and 1K) and a led in series to pin 6.
+
+```
+//simple analog (pwm) output from serial commands
+void setup() {
+  Serial.begin(38400);  //open port and set baudrate - must match in laptop
+  pinMode(6, OUTPUT);  //make it an output
+}
+void loop() {
+  if(Serial.available()) {
+    byte val= Serial.read();
+    if(val==65) {  //match 'A'
+      for(byte i= 0; i<255; i++) {
+        analogWrite(6, i);  //fade in led
+        delay(10);
+      }
+    }
+    if(val==66) {  //match 'B'
+      for(byte i= 255; i>0; i--) {
+        analogWrite(6, i);  //fade in led
+        delay(10);
+      }
+    }
+  }
+  delay(1);  //wait 1 millisecond
+}
+```
+
+In serial monitor you can now type `A` to fade in the led (over 10*255= 2550 milliseconds), and `B` to fade out.
+
+Note: serial data is put in a buffer or cue. Try to type something like `ABABABBBBB` and then press return. As you can see the arduino will play through all these characters in order - like a little sequencer. This is why it is sometimes important to not flood the serial port with too much data, and make sure you (if a port is opened) read faster than you send data to it. Else programes can crash or your computer slow down to a halt.
 
 //--arduino with supercollider
 ==============================
-TODO
+Instead of the serial monitor used above we can do the same with supercollider. Or any program that can open a serialport like python, max, pd, processing etc.
+
+So with the last sketch loaded (`simple analog (pwm) output from serial commands`), try the following in supercollider...
+
+```
+SerialPort.listDevices;//this will post available ports. copy the name from here to the line below
+
+(
+var port= SerialPort("/dev/tty.usbserial-A101NB76", 38400, crtscts: true);//edit
+Routine.run({
+	2.wait;
+	inf.do{
+		"fading in...".postln;
+		port.put(65);
+		3.wait;
+		"fading out...".postln;
+		port.put(66);
+		3.wait;
+	};
+});
+CmdPeriod.doOnce({port.close});
+)
+```
+
+That should make the led fade in and out repeatedly.
 
 //--reading sensors in sc
 -------------------------
-TODO
+Upload the `arduinoToSupercollider_simple.ino`, connect something to A0 (or just connect a bare cable to get noise input) and try the two sc programs `arduinoToSupercollider_simple1.scd` and `arduinoToSupercollider_simple2.scd`.
+
+A more advanced example with serial error checking is shown in arduinoToSupercollider_advanced. Upload `arduinoToSupercollider_advanced.ino` and run `arduinoToSupercollider_advanced.scd` in sc.
 
 //--controlling leds from sc
 ----------------------------
-TODO
+Upload the `supercolliderToArduino_simple.ino`, and connect an led with resistor to pin 6 and test `supercolliderToArduino_simple1.scd` and `supercolliderToArduino_simple2.scd` in supercollider.
+
+Upload the `supercolliderToArduino_advanced.ino`, and connect 6 leds with resistor to pins 3, 5, 6, 9, 10, 11 and run the examples in `supercolliderToArduino_advanced.scd`.
 
 //--preparation for own project
 ===============================
-TODO
+Start to think of a project you want to realize and work in jan-feb. Be prepared to present it next time.
 
 //--extra
 ---------
+Last a small little arduino project that would actually fit very well on a beaglebone black (there it's easier to run it standalone on batteries and no laptop needed).
 
 * first see <http://www.aaronalai.com/emf-detector>
 * then upload the `scEMF.ino` to your arduino

@@ -181,7 +181,7 @@ Open serial port and type capital `A` and the led should start to shine. Type `B
 --------------------------
 PWM stands for pulse-width modulation and this can be used to fade leds in an analog fashion. But it's not really correct to call it analog. It is more like pulsating on/off so quickly that it looks like it's half on. See <http://arduino.cc/en/Tutorial/PWM> for a better explanation.
 
-Note that we can only use the pins marked with `~`. So connect a resistor (between 100 and 1K) and a led in series to pin 6.
+Note that we can only use the pins marked with `~`.
 
 ```
 //simple analog (pwm) output from serial commands
@@ -208,6 +208,8 @@ void loop() {
   delay(1);  //wait 1 millisecond
 }
 ```
+
+* use same led setup connections as above (pin6 -> resistor -> led -> gnd)
 
 In serial monitor you can now type `A` to fade in the led (over 10*255= 2550 milliseconds), and `B` to fade out.
 
@@ -239,7 +241,7 @@ CmdPeriod.doOnce({port.close});
 )
 ```
 
-That should make the led fade in and out repeatedly.
+That should make the led on pin 6 fade in and out repeatedly.
 
 //--reading sensors in sc
 -------------------------

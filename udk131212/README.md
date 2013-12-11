@@ -124,22 +124,40 @@ void loop() {
 
 //--serial communication (laptop -> arduino)
 --------------------------------------------
+TODO
 
 //--digital outputs
 -------------------
+TODO
 
 //--pwm ("analog") outputs
 --------------------------
+TODO
 
 //--arduino with supercollider
 ==============================
+TODO
 
 //--reading sensors in sc
 -------------------------
+TODO
 
 //--controlling leds from sc
 ----------------------------
+TODO
 
 //--preparation for own project
 ===============================
+TODO
 
+//--extra
+---------
+
+* first see <http://www.aaronalai.com/emf-detector>
+* then upload the `scEMF.ino` to your arduino
+* connect a big resistor (3.3M ohm) between A0 and GND
+* connect an antenna also to A0 (around 16cm long solid wire)
+* run the `scEMF.scd` code in supercollider
+* disconnect your laptop charger. this makes the readings better but preferably you should run you arduino on batteries to reduce interference (and then use a bluetooth or wifi module to send data to the laptop).
+
+![emf](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/scEMF.jpg)

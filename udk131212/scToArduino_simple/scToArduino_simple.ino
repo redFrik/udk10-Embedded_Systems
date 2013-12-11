@@ -1,6 +1,6 @@
 //scToArduino - simple example
-//use sc code
-//read one analog sensor input from A0 and send via serial (baudrate 38400)
+//use with sc code scToArduino_simple1.scd or scToArduino_simple2.scd
+//reads one analog sensor input from A0 and send via serial (baudrate 38400)
 
 void setup() {
   Serial.begin(38400);

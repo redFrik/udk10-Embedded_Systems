@@ -1,6 +1,8 @@
 //open serial monitor and set baudrate 38400
 //connect pin 4 to ground
 
+//this example pauses and waits for user input
+
 void setup() {
   Serial.begin(38400);
   pinMode(4, INPUT_PULLUP);

@@ -103,7 +103,7 @@ stop with ctrl+c
 
 //--second python program
 -------------------------
-this program will read a digital sensor and print the result.  we'll use pin 41 on port P9.  see <http://cholla.mmto.org/computers/beagle/beaglebone_pinout1-1024x585.png>.
+this program will read a digital sensor and print the result.  we'll use pin 41 on port P9.  see <http://www.alexanderhiam.com/blog/beaglebone-pinout/>.
 again create the file and start the text editor with...
 
 * `pico digitaltest.py`

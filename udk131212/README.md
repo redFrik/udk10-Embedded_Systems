@@ -147,22 +147,22 @@ Again open the serial monitor, set baudrate 38400 and type something in the uppe
 //--digital outputs
 -------------------
 The pins 2-13 on a standard arduino can also act as outputs (more pins are available on other models, and you can also try 0-1 but only if you're not using the serial port).
-So here we will use pin 7 again, but change it's function to an output and make it turn on/off a led.
+So here we will use pin 6, but change it's function to an output and make it turn on/off a led.
 
 ```
 //simple digital output from serial commands
 void setup() {
   Serial.begin(38400);  //open port and set baudrate - must match in laptop
-  pinMode(7, OUTPUT);  //make it an output
+  pinMode(6, OUTPUT);  //make it an output
 }
 void loop() {
   if(Serial.available()) {
     byte val= Serial.read();
     if(val==65) {  //match 'A'
-      digitalWrite(7, 1);  //turn on led
+      digitalWrite(6, 1);  //turn on led
     }
     if(val==66) {  //match 'B'
-      digitalWrite(7, 0);  //turn off led
+      digitalWrite(6, 0);  //turn off led
     }
   }
   delay(1);  //wait 1 millisecond
@@ -253,7 +253,7 @@ A more advanced example with serial error checking is shown in arduinoToSupercol
 ----------------------------
 Upload the [supercolliderToArduino_simple.ino](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/supercolliderToArduino_simple/supercolliderToArduino_simple.ino), and connect an led with resistor to pin 6 and test [supercolliderToArduino_simple1.scd](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/supercolliderToArduino_simple1.scd) and [supercolliderToArduino_simple2.scd](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/supercolliderToArduino_simple2.scd) in supercollider.
 
-Upload the [supercolliderToArduino_advanced.ino](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/supercolliderToArduino_advanced/supercolliderToArduino_advanced.ino), and connect 6 leds with resistor to pins 3, 5, 6, 9, 10, 11 and run the examples in [supercolliderToArduino_advanced.ino](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/supercolliderToArduino_advanced.scd).
+Upload the [supercolliderToArduino_advanced.ino](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/supercolliderToArduino_advanced/supercolliderToArduino_advanced.ino), and connect 6 leds with resistor to pins 3, 5, 6, 9, 10, 11 and run the examples in [supercolliderToArduino_advanced.scd](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/supercolliderToArduino_advanced.scd).
 
 //--preparation for own project
 ===============================
@@ -271,3 +271,9 @@ Last a small little arduino project that would actually fit very well on a beagl
 * disconnect your laptop charger. this makes the readings better but preferably you should run you arduino on batteries to reduce interference (and then use a bluetooth or wifi module to send data to the laptop).
 
 ![emf](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/scEMF.jpg)
+
+//--extra2
+----------
+To connect a light sensor or some other sensor with varying resistance, you need an additional resistor to create a voltage divider. This extra resistor acts like a balance to the light sensor and should have roughly the same value as the sensor. 10Kohm is a good standard value to start with. See this picture on how to connect it.
+
+![simple_analog_read2](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/simple_analog_read2.jpg)

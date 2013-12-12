@@ -274,6 +274,6 @@ Last a small little arduino project that would actually fit very well on a beagl
 
 //--extra2
 ----------
-To connect a light sensor or some other sensor with varying resistance, you need an additional resistor to create a voltage divider. This extra resistor acts like a balance to the light sensor and should have roughly the same value as the sensor. 10Kohm is a good standard value to start with. See this picture on how to connect it.
+To connect a light sensor or some other sensor with varying resistance (like temperature, flex and fsr), you'll need an additional resistor to create a [voltage divider](https://learn.sparkfun.com/tutorials/voltage-dividers/applications). This extra resistor acts like a balance to the light sensor and should have roughly the same value as the sensor. 10Kohm is a good standard value to start with. See this picture on how to connect it.
 
 ![simple_analog_read2](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/simple_analog_read2.jpg)

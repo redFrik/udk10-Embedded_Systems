@@ -213,13 +213,13 @@ void loop() {
 
 In serial monitor you can now type `A` to fade in the led (over 10*255= 2550 milliseconds), and `B` to fade out.
 
-Note: serial data is put in a buffer or cue. Try to type something like `ABABABBBBB` and then press return. As you can see the arduino will play through all these characters in order - like a little sequencer. This is why it is sometimes important to not flood the serial port with too much data, and make sure you (if a port is opened) read faster than you send data to it. Else programes can crash or your computer slow down to a halt.
+Note: serial data is put in a buffer or cue. Try to type something like `ABABABBBBB` and then press return. As you can see the arduino will play through all these characters in order - like a little sequencer. This is why it is sometimes important to not flood the serial port with too much data, and make sure you (if a port is opened) read faster than you send data to it. Else the serial buffer can crash or your computer or slow it down to a halt.
 
 //--arduino with supercollider
 ==============================
-Instead of the serial monitor used above we can do the same with supercollider. Or any program that can open a serialport like python, max, pd, processing etc.
+Instead of the serial monitor used above, we can do the same with supercollider! Or actually any program that can open a serialport: like python, max, pd, processing etc.
 
-So with the last sketch loaded (simple analog (pwm) output from serial commands), try the following in supercollider...
+So with the last sketch loaded (simple analog (pwm) output from serial commands just above), try the following in supercollider...
 
 ```
 SerialPort.listDevices;//this will post available ports. copy the name from here to the line below
@@ -257,7 +257,7 @@ Upload the [supercolliderToArduino_advanced.ino](https://raw.github.com/redFrik/
 
 //--preparation for own project
 ===============================
-Start to think of a project you want to realize and work in jan-feb. Be prepared to present it next time.
+Start to think of a project you want to realize and work with in jan-feb. Be prepared to present it next time.
 
 //--extra
 ---------

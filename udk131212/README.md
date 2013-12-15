@@ -287,3 +287,9 @@ If you are running Windows, the SerialPort in SuperCollider is not available. On
 * open supercollider and run the [serialToOsc-example.scd](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/serialToOsc-example.scd)
 
 ![serialToOsc-example](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/serialToOsc-example.png)
+
+//--links
+---------
+
+* <http://www.pighixxx.com/abc-arduino-basic-connections/> great resources (pdf)
+* <http://learn.adafruit.com/category/learn-arduino> lots of good tutorials

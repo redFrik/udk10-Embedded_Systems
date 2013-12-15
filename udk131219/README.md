@@ -5,15 +5,15 @@ _more about sensors, beaglebone black, twitter, present own project ideas_
 
 //--autostart
 -------------
-To make a python program automatically start when you power on the beaglebone black, you can do edit the rc.local file and launch the py file from there.
+To make a python program automatically start when you power on the beaglebone black, you can do edit the rc.local file and launch the .py file from there.
 
 * `sudo pico /etc/rc.local`
 * place the cursor somewhere before the `exit 0` line and type...
 * `(sleep 5; python /home/debian/led_6channel_test.py) &` # edit to match the name of the file you want to autoload (no need with sudo, rc.local is already running as sudo)
 * to stop in a safe way, either set up a GPIO pin with a button that turns the system off (see below), or log in with ssh and do `sudo pkill python`
 
-If you want to test the above led_6channel_test example, connect 6 leds, 6 resistors and an uln2803a like [this](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131119/led_6channel_test.png).
-The led_6channel_test pyhon code is [here](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131119/led_6channel_test.py)
+If you want to test the above led_6channel_test example, connect 6 leds, 6 resistors and an uln2803a like [this](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131219/led_6channel_test.png).
+The led_6channel_test pyhon code is [here](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131219/led_6channel_test.py)
 
 //--autostart jack and sc
 -------------------------
@@ -31,12 +31,12 @@ sleep 1
 su debian -c "sclang /home/debian/autostart_test.scd"
 ```
 
-The above bash script will start jack and sclang after each other. We then need to launch this script at startup. Here is one of the easiest ways of doing that...
+The above bash script will start jack and sclang after each other. We then need to launch this script at startup. Here is one of the easier ways of doing that...
 
 * `sudo pico /etc/rc.local`
 * place the cursor somewhere before the `exit 0` line and type...
 * `(sleep 5; /bin/bash /home/debian/autostart_test) &`
-* last we should create a supercollider test file called `autostart_test.scd` (same as in the bash script above) and use `s.waitForBoot` to start scserver:
+* last we should create a supercollider test file called autostart_test.scd (same as in the bash script above) and use s.waitForBoot to start scserver:
 * `pico autostart_test.scd`
 * add the following sc code, save and exit
 
@@ -47,7 +47,7 @@ s.waitForBoot{
 ```
 
 * `sudo reboot` # jack and sc should start automatically after a while
-* to stop log in with ssh and do `sudo pkill jackd` (or use a pin like described below)
+* to stop log in with ssh and do `sudo pkill jackd` (or set up a GPIO pin like described below)
 
 //--turning off with a button
 -----------------------------
@@ -73,10 +73,10 @@ while True:
 	time.sleep(0.5) # wait half a second
 ```
 
-You can now test this python program with the command `sudo python autostart_stop.py &`. After you run that connect a cable between P9_23 and 3.3v (Note: take extra care that the pins you are connecting to are the right ones. See <http://www.alexanderhiam.com/blog/beaglebone-pinout/>). After connecting the pin 23 (it's enough to just hold it to 3.3v more than 0.5sec), the system should turn itself off. Wait until all the blue leds are off. It takes around 25seconds. Then you can safely remove the 5v power.
-If you wish to quickly start again and not remove the 5v, press the small power button next to the ethernet jack on the bbb.
+You can now test this python program with the command `sudo python autostart_stop.py &`. After you run that connect a cable between P9_23 and 3.3v (Note: take extra care that the pins you are connecting to are the right ones. See <http://www.alexanderhiam.com/blog/beaglebone-pinout/>). After connecting the pin 23 (it's enough to just hold it to 3.3v more than 0.5sec), the system should turn itself off. Wait until all the blue leds are off (it takes around 25seconds) and then you can safely remove the 5v power.
+If you wish to quickly start again, press the small power button next to the ethernet jack on the bbb.
 
-Last, to start this button stop python program when the beaglebone black is started, we can edit the autostart_test script we made above.
+Last, to automatically start this button-stop-python-program, we can edit the autostart_test script we made above.
 
 * `pico autostart_test`
 * add two lines and make it look like this (and press ctrl+o to save and ctrl+x to exit as usual)
@@ -92,23 +92,24 @@ su debian -c "sclang /home/debian/autostart_test.scd"
 
 Try it by rebooting (`sudo reboot`) and when it has started, connect the pin P9_23 to 3.3v to turn off.
 
-(We don't need sudo on the python script because rc.local is already running as sudo.)
+(Again we don't need sudo on the python script because rc.local is already running as sudo.)
 
 //--orfi_twitter
 ----------------
 This is a small project I built using the following:
 
-* beaglebone black
-* 5v battery pack
-* 4-port usb hub
-* logilink nano wlan usb adapter
-* 3d sound audio usb adapter
-* roxcode active speaker
-* uln2803a darlington array
-* six 120ohm smd resistors
-* double row pin headers
+* [beaglebone black](http://www.exp-tech.de/Mainboards/BeagleBone-Black.html)
+* [5v battery pack](http://www.reichelt.de/Mobile-Powerpacks/POWERBANK-5000/3//index.html?ACTION=3&GROUPID=4491&ARTICLE=102042&SEARCH=Mobile%20Powerpacks&SHOW=1&OFFSET=500&)
+* [4-port usb hub](http://www.reichelt.de/USB-Hubs/MANHATTAN-160599/3//index.html?ACTION=3&GROUPID=6103&ARTICLE=94684&SEARCH=MANHATTAN%20160599&SHOW=1&OFFSET=500&)
+* [logilink nano wlan usb adapter](http://www.reichelt.de/WLAN-Adapter/LOGILINK-WL0084B/3//index.html?ACTION=3&GROUPID=770&ARTICLE=120745&SEARCH=logilink%20nano&SHOW=1&OFFSET=500&)
+* [3d sound audio usb adapter](http://dx.com/p/virtual-5-1-surround-usb-2-0-external-sound-card-22475)
+* [roxcode active speaker](http://www.kjell.com/sortiment/dator-kringutrustning/datortillbehor/hogtalare-headset/mobil-och-mp3-hogtalare/roxcore-portabel-hogtalare-svart-p23133)
+* [uln2803a darlington array](http://www.reichelt.de/ICs-U-ZTK-/ULN-2803A/3//index.html?ACTION=3&GROUPID=2921&ARTICLE=22085&SEARCH=uln2803a&SHOW=1&OFFSET=500&)
+* [six 120ohm smd resistors](http://www.reichelt.de/SMD-1206-100-Ohm-910-Ohm/SMD-1-4W-120/3//index.html?ACTION=3&GROUPID=3088&ARTICLE=18251&SEARCH=smd%201%2F4w%20120&SHOW=1&OFFSET=500&)
+* [double row pin headers](http://www.reichelt.de/Stiftleisten/SL-2X25G-2-54/3//index.html?ACTION=3&GROUPID=3220&ARTICLE=19494&SEARCH=SL%202X25G%202%2C54&SHOW=1&OFFSET=500&)
 * [stripboard](http://en.wikipedia.org/wiki/Stripboard)
 
+![orfi_twitter](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131129/orfi_twitter.jpg)
 
 It's a sort of pillow which plays sound out of twitter messages. When a twitter message mentions @MFF_f0 the leds on the pillow starts to flash and a little melody is generated from of the text in the message. With the two sensors (one in each 'wing' of the pillow), one can play back the latest and next to latest melodies.
 There's a python program that scan twitter messages, read sensors and controls the six leds, and a supercollider program for generating and playing melodies.

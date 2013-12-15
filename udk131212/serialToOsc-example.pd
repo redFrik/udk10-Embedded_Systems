@@ -1,0 +1,36 @@
+#N canvas 319 544 562 354 10;
+#X declare -lib pduino;
+#X declare -lib mrpeach;
+#X obj 5 13 import pduino;
+#X obj 87 176 arduino;
+#X msg 87 84 devices;
+#X text 140 82 <- first click here and then look in pdwindow;
+#X msg 99 126 open 10;
+#X text 153 123 <- then edit to match arduino com port index;
+#X msg 161 178 pinMode 14 analog;
+#X obj -22 211 spigot;
+#X obj 29 211 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj -22 230 print;
+#X text 17 230 debug;
+#X text 276 176 <- activate analog A0;
+#X obj 5 40 import mrpeach;
+#X obj 87 300 packOSC;
+#X obj 87 220 route analog;
+#X obj 87 239 prepend /analog;
+#X obj 87 323 udpsend;
+#X msg 171 323 connect 127.0.0.1 57120;
+#X text 323 321 <- start sending to supercollider;
+#X text 123 9 for this to work you'll need to upload /EXAMPLES/FIRMATA/STANDARDFIRMATA
+to you arduino;
+#X connect 1 0 7 0;
+#X connect 1 0 14 0;
+#X connect 2 0 1 0;
+#X connect 4 0 1 0;
+#X connect 6 0 1 0;
+#X connect 7 0 9 0;
+#X connect 8 0 7 1;
+#X connect 13 0 16 0;
+#X connect 14 0 15 0;
+#X connect 15 0 13 0;
+#X connect 17 0 16 0;

@@ -277,3 +277,13 @@ Last a small little arduino project that would actually fit very well on a beagl
 To connect a light sensor or some other sensor with varying resistance (like temperature, flex and fsr), you'll need an additional resistor to create a [voltage divider](https://learn.sparkfun.com/tutorials/voltage-dividers/applications). This extra resistor acts like a balance to the light sensor and should have roughly the same value as the sensor. 10Kohm is a good standard value to start with. See this picture on how to connect it.
 
 ![simple_analog_read2](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/simple_analog_read2.jpg)
+
+//--extra3
+----------
+If you are running Windows, the SerialPort in SuperCollider is not available. One workaround is to run a PureData patch in the background. The pd patch reads serial data from the arduino and then sends it to sc via osc.
+
+* in arduino ide upload Examples/Firmata/StandardFirmata
+* start pd-extended and the [serialToOsc-example.pd](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/serialToOsc-example.pd) patch - set the comport there and click open, pinmode and connect
+* open supercollider and run the [serialToOsc-example.scd](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/serialToOsc-example.scd)
+
+![serialToOsc-example](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/serialToOsc-example.png)

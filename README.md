@@ -19,7 +19,7 @@ dates
 - [x] [28nov 14-16](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131128): beaglebone black supercollider together with python
 - [x] [05dec 14-16](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131205): beaglebone black as a standalone supercollider instrument
 - [x] [12dec 14-16](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131212): arduino and supercollider together plus sensors, prepare own projects
-- [ ] [19dec 14-16](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131219): more about sensors, arduino, beaglebone black, twitter, prepare own projects
+- [ ] [19dec 14-16](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131219): more about sensors, beaglebone black, twitter, present own project ideas
 - [ ] 26dec: **NO CLASS**
 - [ ] 02jan: **NO CLASS**
 - [ ] [09jan 14-17] own projects

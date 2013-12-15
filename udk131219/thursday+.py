@@ -48,7 +48,6 @@ def main():
 			if last.get(sensor, None)!=val:
 				sendOSC("/dig", sensor, val)
 				last[sensor]= val # store sensor value
-				print sensor
 				if sensor=="P9_23" and val==1: # a bit of a hack
 					os.system("sudo halt") # turn off the bbb
 					exit() # exit this python program

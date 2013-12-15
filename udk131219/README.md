@@ -96,7 +96,7 @@ Try it by rebooting (`sudo reboot`) and when it has started, connect the pin P9_
 
 //--thursday instrument autostart
 ---------------------------------
-To add autostart and a stop button to the [thursday instrument](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131205) we built two weeks ago, you can do the following...
+To add autostart and a stop button to the [thursday instrument](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131205#--starting-the-instrument) we built two weeks ago, you can do the following...
 
 * `cd /home/debian`
 * `pico thursday_autostart` # create a textfile in home
@@ -111,7 +111,7 @@ sleep 1
 su debian -c "sclang /home/debian/thursday.scd"
 ```
 
-* download and copy over (with scp) the modified [thursday+.py](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131219/thursday+.py) to the bbb.
+* download and copy over (with scp) the modified [thursday+.py](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131219/thursday+.py) to the bbb. (lines modified: 13, 17, 51-53)
 * restart and now it should both start automatically (jingle should play) and you can turn it off by connecting P9_23 to 3.3v.
 
 //--orfi_twitter

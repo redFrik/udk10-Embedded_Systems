@@ -83,7 +83,7 @@ Last, to automatically start this button-stop-python-program, we can edit the au
 
 ```
 #!/bin/bash
-python /home/debian/autostart_stop.py &
+python /home/debian/autostart_stop.py & # added for stop button support
 sleep 1
 su debian -c "jackd -dalsa -dhw:1,0 -p1024 -n3 -s &"
 sleep 1
@@ -93,6 +93,26 @@ su debian -c "sclang /home/debian/autostart_test.scd"
 Try it by rebooting (`sudo reboot`) and when it has started, connect the pin P9_23 to 3.3v to turn off.
 
 (Again we don't need sudo on the python script because rc.local is already running as sudo.)
+
+//--thursday instrument autostart
+---------------------------------
+To add autostart and a stop button to the [thursday instrument](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131205) we built two weeks ago, you can do the following...
+
+* `cd /home/debian`
+* `pico thursday_autostart` # create a textfile in home
+* add the following (and press ctrl+o to save and ctrl+x to exit as usual)
+
+```
+#!/bin/bash
+python /home/debian/thursday+.py &
+sleep 1
+su debian -c "jackd -dalsa -dhw:1,0 -p1024 -n3 -s &"
+sleep 1
+su debian -c "sclang /home/debian/thursday.scd"
+```
+
+* download and copy over (with scp) the modified [thursday+.py](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131219/thursday+.py) to the bbb.
+* restart and now it should both start automatically (jingle should play) and you can turn it off by connecting P9_23 to 3.3v.
 
 //--orfi_twitter
 ----------------
@@ -108,6 +128,7 @@ This is a small project I built using the following:
 * [six 120ohm smd resistors](http://www.reichelt.de/SMD-1206-100-Ohm-910-Ohm/SMD-1-4W-120/3//index.html?ACTION=3&GROUPID=3088&ARTICLE=18251&SEARCH=smd%201%2F4w%20120&SHOW=1&OFFSET=500&)
 * [double row pin headers](http://www.reichelt.de/Stiftleisten/SL-2X25G-2-54/3//index.html?ACTION=3&GROUPID=3220&ARTICLE=19494&SEARCH=SL%202X25G%202%2C54&SHOW=1&OFFSET=500&)
 * [stripboard](http://en.wikipedia.org/wiki/Stripboard)
+* [orfi pillow](http://musicalfieldsforever.com/orfi_conc.html) left over from an old installation we did
 
 ![orfi_twitter](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131129/orfi_twitter.jpg)
 

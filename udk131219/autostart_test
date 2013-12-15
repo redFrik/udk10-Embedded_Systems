@@ -1,0 +1,7 @@
+#!/bin/bash
+python /home/debian/autostart_stop.py & # added for stop button support
+sleep 1
+su debian -c "jackd -dalsa -dhw:1,0 -p1024 -n3 -s &"
+sleep 1
+su debian -c "sclang /home/debian/autostart_test.scd"
+

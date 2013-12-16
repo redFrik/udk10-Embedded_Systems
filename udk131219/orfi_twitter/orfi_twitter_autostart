@@ -1,0 +1,6 @@
+#!/bin/bash
+su debian -c "jackd -dalsa -dhw:1,0 -p1024 -n3 -s &"
+sleep 1
+su debian -c "sclang /home/debian/orfi_twitter.scd &"
+sleep 20
+python /home/debian/orfi_twitter.py &

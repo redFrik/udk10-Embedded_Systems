@@ -132,8 +132,9 @@ This is a small project I built using the following:
 
 ![orfi_twitter](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131129/orfi_twitter/orfi_twitter.jpg)
 
-It's a sort of pillow which plays sounds and melodies generated out of twitter messages. When a twitter message mentions @MFF_f0 the leds on the pillow starts to flash and a little melody played. With the two sensors (one in each 'wing' of the pillow), one can play back the latest and next to latest melodies. The left sensor just plays the latest message, while the right one step through backwards in time and also lowers the tempo for each message playback. Message history is saved in a log and loaded again next time you restart the bbb.
-There's a python program that scan twitter messages, read sensors and controls the six leds, and a supercollider program for generating and playing melodies. All the source code and schematics are in the folder 'orfi_twitter' next to this readme file. And to get the twitter thing running I followed tutorials here...
+It's a sort of wireless pillow that plays sounds and melodies generated from twitter messages. When a twitter message mentions @MFF_f0, the leds on the pillow starts to flash and a little melody is played. With the two sensors (one in each 'wing' of the pillow), one can play back the latest and next to latest melodies. The left sensor just plays the latest message, while the right one step through backwards in time and also lowers the tempo for each message playback. Message history is saved in a log and loaded again the next time you power on the pillow.
+
+There's a python program that scans twitter messages, read sensors and controls (pwm) the six leds. There is also a supercollider program that generates and plays the melodies. All the source code and schematics are in the folder 'orfi_twitter' next to this readme file. And to get the twitter thing running I followed tutorials here...
 
 * <https://learn.sparkfun.com/tutorials/raspberry-pi-twitter-monitor/register-your-twitter-app>
 * <http://www.makeuseof.com/tag/how-to-build-a-raspberry-pi-twitter-bot/>
@@ -144,13 +145,14 @@ Basically you need to do the following on your beaglebone black...
 * `sudo apt-get upgrade`
 * `sudo apt-get install python-pip` # you should already have this
 * `sudo pip install twython`
-* then move over (with scp) the files orfi_twitter_autostart, orfi_twitter.py and orfi_twitter.scd. Put them in the /home/debian directory.
-* register an application at dev.twitter.com (see links above)
+* then move over (with scp) the files orfi_twitter_autostart, orfi_twitter.py and orfi_twitter.scd to /home/debian/
+* register an application at http://dev.twitter.com (see links to tutorials above)
 * `pico orfi_twitter.py` # and edit the four twitter authentication tokens where it says 'edit'
-* `sudo pico /etc/rc.local` # and add the line: 
-* shut down, connect soundcard and speaker + internet (if you use wlan it needs to be prepared. see udk131128 readme)
-* restart and wait
-* send a twitter message with @MFF_f0
+* `sudo pico /etc/rc.local` # and add the line: `(sleep 5; /bin/bash /home/debian/orfi_twitter_autostart) &`
+* shut down, connect soundcard and speaker + internet (if you use wlan it needs to be prepared. see [udk131128](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131128#--extra))
+* restart and wait a bit until fully booted
+* activate the sensors to see if anything sounds
+* send a twitter message with @MFF_f0 (or whatever term you set to track in the orfi_twitter.py file)
 
 //--extra (advanced)
 --------------------

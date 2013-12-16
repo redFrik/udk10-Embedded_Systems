@@ -43,6 +43,19 @@ Start readsensors1 with...
 
 Now connect sensors to the pins listed in the readsensors python code. See pin connection diagram here... [http://www.alexanderhiam.com/blog/beaglebone-pinout/](http://www.alexanderhiam.com/blog/beaglebone-pinout/) and also see instructions two weeks ago [here](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131114#--second-python-program)
 
+//--receiving osc in python
+---------------------------
+Copy the file [osctest2.py](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131128/osctest2.py) to the bbb.
+
+* `python osctest2.py`
+
+Then in supercollider on your laptop type this...
+
+* `n= NetAddr("192.168.1.53", 10000)` # edit to match ip of bbb
+* `n.sendMsg(\toPython, 123)`
+
+The osctest2 python program should print out `[123]`. Stop it with ctrl+c.
+
 //--extra
 ---------
 Optional - if you have a wlan usb stick like [this](http://www.reichelt.de/WLAN-Adapter/LOGILINK-WL0084B/3/index.html?&ACTION=3&LA=5&ARTICLE=120745&GROUPID=770&artnr=LOGILINK+WL0084B)

@@ -123,7 +123,7 @@ This is a small project I built using the following:
 * [4-port usb hub](http://www.reichelt.de/USB-Hubs/MANHATTAN-160599/3//index.html?ACTION=3&GROUPID=6103&ARTICLE=94684&SEARCH=MANHATTAN%20160599&SHOW=1&OFFSET=500&)
 * [logilink nano wlan usb adapter](http://www.reichelt.de/WLAN-Adapter/LOGILINK-WL0084B/3//index.html?ACTION=3&GROUPID=770&ARTICLE=120745&SEARCH=logilink%20nano&SHOW=1&OFFSET=500&)
 * [3d sound audio usb adapter](http://dx.com/p/virtual-5-1-surround-usb-2-0-external-sound-card-22475)
-* [roxcode active speaker](http://www.kjell.com/sortiment/dator-kringutrustning/datortillbehor/hogtalare-headset/mobil-och-mp3-hogtalare/roxcore-portabel-hogtalare-svart-p23133)
+* [roxcore active speaker](http://www.kjell.com/sortiment/dator-kringutrustning/datortillbehor/hogtalare-headset/mobil-och-mp3-hogtalare/roxcore-portabel-hogtalare-svart-p23133)
 * [uln2803a darlington array](http://www.reichelt.de/ICs-U-ZTK-/ULN-2803A/3//index.html?ACTION=3&GROUPID=2921&ARTICLE=22085&SEARCH=uln2803a&SHOW=1&OFFSET=500&)
 * [six 120ohm smd resistors](http://www.reichelt.de/SMD-1206-100-Ohm-910-Ohm/SMD-1-4W-120/3//index.html?ACTION=3&GROUPID=3088&ARTICLE=18251&SEARCH=smd%201%2F4w%20120&SHOW=1&OFFSET=500&)
 * [double row pin headers](http://www.reichelt.de/Stiftleisten/SL-2X25G-2-54/3//index.html?ACTION=3&GROUPID=3220&ARTICLE=19494&SEARCH=SL%202X25G%202%2C54&SHOW=1&OFFSET=500&)
@@ -146,6 +146,8 @@ Basically you need to do the following on your beaglebone black...
 * `sudo apt-get upgrade`
 * `sudo apt-get install python-pip` # you should already have this
 * `sudo pip install twython`
+
+TODO
 
 //--extra (advanced)
 --------------------

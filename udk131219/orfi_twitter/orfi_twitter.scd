@@ -44,9 +44,12 @@ s.waitForBoot{
 		pfunc.value(notes);	//play back new twitter text
 	}, \text);
 	OSCFunc({|msg|
-		{Line.kr(0.5, 0, 0.2, doneAction:2)*SinOsc.ar([800, 808])}.play;
+		{Line.kr(0.5, 0, 0.2, doneAction:2)*SinOsc.ar([400, 404]*XLine.kr(1, 4, 0.2))}.play;
 	}, \on);
-	OSCFunc({|msg| s.quit}, \off);	//quit brutally
+	OSCFunc({|msg|
+		{Line.kr(0.5, 0, 0.2, doneAction:2)*SinOsc.ar([400, 404]*XLine.kr(4, 1, 0.2))}.play;
+		{s.quit}.defer(1);	//quit brutally
+	}, \off);
 	pfunc= {|notes, dur= 0.01, rate= 1, channels= #[0, 1, 2, 3, 4, 5]|
 		rout.stop;	//stop previous routine if any
 		6.do{|i| net.sendMsg(\fromSC, i, 0)};	//zero all pwm

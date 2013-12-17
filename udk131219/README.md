@@ -157,3 +157,21 @@ Basically you need to do the following on your beaglebone black...
 //--extra (advanced)
 --------------------
 To make more GPIO pins available one need to disable hdmi. See <http://www.logicsupply.com/blog/2013/07/18/disabling-the-beaglebone-black-hdmi-cape/>
+
+//--extra
+---------
+To turn off the annoying and bright heartbeat led, you can do the following...
+
+* `cd /sys/class/leds/beaglebone\:green\:usr0`
+* `sudo su` # become root
+* `echo none > trigger`
+* `exit` # back to user debian
+* `cd ~`
+
+To get it back do the same again but replace `none` with `heartbeat`.
+
+Though this change will not survive restarts. To make the heartbeat go away permanently you can do...
+
+* `sudo pico /etc/rc.local`
+* add the following line somewhere before exit 0
+* `echo none > /sys/class/leds/beaglebone\:green\:usr0/trigger # turn off heartbeat led`

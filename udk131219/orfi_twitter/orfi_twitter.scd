@@ -19,17 +19,21 @@ s.waitForBoot{
 	if(log.isNil, {log= List.newClear(5)});
 	net= NetAddr("127.0.0.1", 15555);
 	OSCFunc({|msg|
+		var n;
 		//msg.postln;	//debug
 		if(msg[1]==1, {
-			pfunc.value(log[0], 0.01, #[0, 1, 2]);	//play back last twitter text
+			n= log[0];	//play back last twitter text
+			pfunc.value(log[0], 0.01, 1, #[0, 1, 2]);
 			cnt= 0;		//reset counter
 		});
 	}, \sw1);
 	OSCFunc({|msg|
+		var n;
 		//msg.postln;	//debug
 		if(msg[1]==1, {
+			n= log.copyToEnd(1).wrapAt(cnt);//play back notes in history log
+			pfunc.value(n, cnt+2*0.01, 0.95.pow(cnt+1), #[3, 4, 5]);
 			cnt= cnt+1;
-			pfunc.value(log.copyToEnd(1).wrapAt(cnt), cnt+1*0.01, #[3, 4, 5]);//play back older
 		});
 	}, \sw2);
 	OSCFunc({|msg|
@@ -39,8 +43,11 @@ s.waitForBoot{
 		log.writeArchive("/home/debian/orfi_twitter_log.txt");
 		pfunc.value(notes);	//play back new twitter text
 	}, \text);
+	OSCFunc({|msg|
+		{Line.kr(0.5, 0, 0.2, doneAction:2)*SinOsc.ar([800, 808])}.play;
+	}, \on);
 	OSCFunc({|msg| s.quit}, \off);	//quit brutally
-	pfunc= {|notes, dur= 0.01, channels= #[0, 1, 2, 3, 4, 5]|
+	pfunc= {|notes, dur= 0.01, rate= 1, channels= #[0, 1, 2, 3, 4, 5]|
 		rout.stop;	//stop previous routine if any
 		6.do{|i| net.sendMsg(\fromSC, i, 0)};	//zero all pwm
 		rout= Routine.run({
@@ -51,8 +58,9 @@ s.waitForBoot{
 				{x==46} {syn2.set(\t_trig, 1)}	//dot
 				{x==44} {syn3.set(\t_trig, 1)}	//comma
 				{x==64} {syn1.set(\t_trig, 1)}	//at
-				{syn1.set(\amp, 0.1, \freq, x.midicps)};
+				{syn1.set(\amp, 0.1, \freq, x.midicps*rate)};
 				channels.do{|i| net.sendMsg(\fromSC, i, pwm)};
+				//x.asAscii.post;	//debug
 				dur.wait;	//melody speed
 			};
 			syn1.set(\amp, 0);

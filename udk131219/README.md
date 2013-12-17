@@ -128,7 +128,7 @@ This is a small project I built using the following:
 * [six 120ohm smd resistors](http://www.reichelt.de/SMD-1206-100-Ohm-910-Ohm/SMD-1-4W-120/3//index.html?ACTION=3&GROUPID=3088&ARTICLE=18251&SEARCH=smd%201%2F4w%20120&SHOW=1&OFFSET=500&)
 * [double row pin headers](http://www.reichelt.de/Stiftleisten/SL-2X25G-2-54/3//index.html?ACTION=3&GROUPID=3220&ARTICLE=19494&SEARCH=SL%202X25G%202%2C54&SHOW=1&OFFSET=500&)
 * [stripboard](http://en.wikipedia.org/wiki/Stripboard)
-* [orfi pillow](http://musicalfieldsforever.com/orfi_conc.html) left over from an old installation we did
+* [orfi pillow](http://musicalfieldsforever.com/orfi_conc.html) left over from an old installation i did together with musicalfieldsforever
 
 ![orfi_twitter](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131129/orfi_twitter/orfi_twitter.jpg)
 

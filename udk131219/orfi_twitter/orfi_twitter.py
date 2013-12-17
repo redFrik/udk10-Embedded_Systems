@@ -98,6 +98,7 @@ def sendOSC(address, val):
 def main():
 	t= OrfiThread()
 	t.start()
+	sendOSC("/on", 1) # notify sc that python is running
 	while True:
 		test_digital()
 		time.sleep(speed) # wait a little

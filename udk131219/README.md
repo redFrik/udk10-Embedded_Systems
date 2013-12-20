@@ -154,6 +154,8 @@ Basically you need to do the following on your beaglebone black...
 * activate the sensors to see if anything sounds
 * send a twitter message with @MFF_f0 (or whatever term you set to track in the orfi_twitter.py file)
 
+![orfi_twitter_inside](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131129/orfi_twitter/orfi_twitter_inside.jpg)
+
 //--extra (advanced)
 --------------------
 To make more GPIO pins available one need to disable hdmi. See <http://www.logicsupply.com/blog/2013/07/18/disabling-the-beaglebone-black-hdmi-cape/>

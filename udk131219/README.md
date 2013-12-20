@@ -130,7 +130,7 @@ This is a small project I built using the following:
 * [stripboard](http://en.wikipedia.org/wiki/Stripboard)
 * [orfi pillow](http://musicalfieldsforever.com/orfi_conc.html) left over from an old installation i did together with musicalfieldsforever
 
-![orfi_twitter](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131129/orfi_twitter/orfi_twitter.jpg)
+![orfi_twitter](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131219/orfi_twitter/orfi_twitter.jpg)
 
 It's a sort of wireless pillow that plays sounds and melodies generated from twitter messages. When a twitter message mentions @MFF_f0, the leds on the pillow starts to flash and a little melody is played. With the two sensors (one in each 'wing' of the pillow), one can play back the latest and next to latest melodies. The left sensor just plays the latest message, while the right one step through backwards in time and also lowers the tempo for each message playback. Message history is saved in a log and loaded again the next time you power on the pillow.
 
@@ -154,7 +154,7 @@ Basically you need to do the following on your beaglebone black...
 * activate the sensors to see if anything sounds
 * send a twitter message with @MFF_f0 (or whatever term you set to track in the orfi_twitter.py file)
 
-![orfi_twitter_inside](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131129/orfi_twitter/orfi_twitter_inside.jpg)
+![orfi_twitter_inside](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131219/orfi_twitter/orfi_twitter_inside.jpg)
 
 //--extra (advanced)
 --------------------

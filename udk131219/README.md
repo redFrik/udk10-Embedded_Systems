@@ -156,6 +156,8 @@ Basically you need to do the following on your beaglebone black...
 
 ![orfi_twitter_inside](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131219/orfi_twitter/orfi_twitter_inside.jpg)
 
+With the 5000mAh 5v battery fully charged, the system runs for about 9.5 hours.
+
 //--extra (advanced)
 --------------------
 To make more GPIO pins available one need to disable hdmi. See <http://www.logicsupply.com/blog/2013/07/18/disabling-the-beaglebone-black-hdmi-cape/>

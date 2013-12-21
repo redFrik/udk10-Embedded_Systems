@@ -186,7 +186,9 @@ To reduce power consumption a bit (my bbb takes around 350mA in idle mode with w
 
 * `sudo apt-get install cpufrequtils`
 * `cpufreq-info` # should show the default 1ghz cpu frequency
-* `sudo cpufreq-set --governor powersave`
+* `sudo cpufreq-set --governor powersave` # the default is performance
 * `cpufreq-info`# frequency should now be 300mhz
 
 After this the bbb should draw a bit less current (my bbb with the same setup went down to 290mA - couldn't notice any problems with sound, sensors or pwm outputs so far).
+
+Note: on my bbb ethernet draws 90-100mA while the usb wlan adater only around 20mA. So setting up wlan and disconnecting the ethernet cable will reduce the power consumption quite a bit.

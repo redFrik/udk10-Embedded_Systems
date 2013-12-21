@@ -179,3 +179,14 @@ Though this change will not survive restarts. To make the heartbeat go away perm
 * `sudo pico /etc/rc.local`
 * add the following line somewhere before exit 0
 * `echo none > /sys/class/leds/beaglebone\:green\:usr0/trigger # turn off heartbeat led`
+
+//--extra2
+----------
+To reduce power consumption a bit (my bbb takes around 350mA in idle mode with wlan adapter connected and jackd+sc+python running), you can decrease the cpu speed.
+
+* `sudo apt-get install cpufrequtils`
+* `cpufreq-info` # should show the default 1ghz cpu frequency
+* `sudo cpufreq-set --governor powersave`
+* `cpufreq-info`# frequency should now be 300mhz
+
+After this the bbb should draw a bit less current (my bbb with the same setup went down to 290mA - couldn't notice any problems with sound, sensors or pwm outputs so far).

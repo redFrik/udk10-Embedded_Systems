@@ -1,5 +1,6 @@
 //this program can run standalone and will turn on/off relays (or leds) following a pattern score
 //each relay will play the score but with variation in timing.  after a while the relays will be out of sync.
+//if all variations are 0 then all relays will play the score in sync.  with some variation relays will slowly get out of sync, and with a lot of variation the relays will appear random.
 //see this as an example of how to balance randomness versus order
 
 //--setup

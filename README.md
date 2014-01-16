@@ -23,7 +23,7 @@ dates
 - [ ] 26dec: **NO CLASS**
 - [ ] 02jan: **NO CLASS**
 - [x] [09jan 14-17](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk140109): own projects
-- [ ] [16jan 14-17] own projects
+- [x] [16jan 14-17](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk140116): own projects
 - [ ] [23jan 14-17] own projects
 - [ ] [06feb 14-17] own projects
 - [ ] 13feb: **NO CLASS**

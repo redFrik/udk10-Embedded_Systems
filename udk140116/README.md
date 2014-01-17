@@ -4,8 +4,7 @@
 _own projects_
 
 
-
-//--using hid in bbb
+//--using HID in bbb
 --------------------
 you can connect gamepads, joysticks, and other usb devices to the beaglebone black. and to make use of them in supercollider we can write a small python program that reads and sends the hid data via osc.
 
@@ -30,6 +29,48 @@ for d in hid.enumerate(0, 0):
                 print key, d[key]
         print ""
 ```
+
+this second example show how to send data from the device to sc. make sure you edit the `name` variable to match your device (check what is printed in the example above).
+and remember to remove the debug print statement after you got it working - it slows down the data.
+
+```
+import OSC
+import hid
+
+sc= OSC.OSCClient()
+sc.connect(('127.0.0.1', 57120))
+name= "Macally iShock" # edit to match
+
+vendor_id= -1
+product_id= -1
+for d in hid.enumerate(0, 0):
+        keys= d.keys()
+        for key in keys:
+                print key, d[key]
+                if d[key]==name:
+                        vendor_id= d['vendor_id']
+                        product_id= d['product_id']
+                        print "connecting to device.... "+name
+        print ""
+def sendOSC(name, val):
+        msg= OSC.OSCMessage()
+        msg.setAddress(name)
+        msg.append(val)
+        try:
+                sc.send(msg)
+        except:
+                pass
+        print msg # debug
+
+try:
+        device= hid.device(vendor_id, product_id)
+        while True:
+                data= device.read(16)
+                sendOSC("/hid", data)
+except KeyboardInterrupt:
+        device.close()
+```
+
 
 //--rotary encoder
 ------------------

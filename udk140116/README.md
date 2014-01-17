@@ -71,6 +71,21 @@ except KeyboardInterrupt:
         device.close()
 ```
 
+and to receive the osc data in supercollider you can just do...
+
+`OSCFunc({|msg| msg.postln}, \hid)`
+
+a more involved example with sound is...
+
+```
+//take the first two hid parameters and control frequencies of two oscillators
+s.waitForBoot{
+	Ndef(\triangles, {|freq1= 63, freq2= 63| LFTri.ar([freq1, freq2].lag(0.5).midicps, 0, 0.2)}).play;
+	OSCFunc({|msg|
+		Ndef(\triangles).set(\freq1, msg[1], \freq2, msg[2]);
+	}, \hid);
+};
+```
 
 //--rotary encoder
 ------------------

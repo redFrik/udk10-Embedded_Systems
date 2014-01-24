@@ -46,9 +46,7 @@ here's an example of controlling two servo motors from supercollider.
 put the following code in to a file with `pico pwm_control.py`.  run it with `sudo python pwm_control.py`
 
 ```
-
-# simple program to control two leds or servos via pwm on a beaglebone black
-# note: must use transistors or uln2803a to protect the pins
+# simple program to control two servos via pwm on a beaglebone black running sc
 
 import Adafruit_BBIO.PWM as PWM
 import time

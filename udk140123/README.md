@@ -104,3 +104,17 @@ Routine.run({
 })
 )
 ```
+
+//--reflashing the emmc
+-----------------------
+sometimes the beaglebone black will stop booting from the sd card. The symptom is that when you connect 5v, the bbb only show 4 blue leds (on all the time) and you can't ssh in to it. Then maybe the internal emmc flash (with angstrom linux) got corrupted and you'll need to re-flash it. It is quite easy but you'll need an extra sd card to perform this flash fix.
+
+* download the latest BB-eMMC-flasher from http://www.elinux.org/Beagleboard:Updating_The_Software (as of writing BBB-eMMC-flasher-2013.09.04.img.xz)
+* unpack and write it to a spare sd card (not your main debian card) with e.g. PiFiller
+* turn off and disconnect ethernet and usb cables from the bbb
+* put in the sd card with the flasher
+* hold down button S2 and apply 5v power
+* release S2 after leds start flashing and wait until all 4 leds are lit up (~45min)
+* remove 5v power, put back your debian card and ethernet+usb+power and now it should boot again from the sd card
+
+see http://www.elinux.org/Beagleboard:Updating_The_Software for more complete info.

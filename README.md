@@ -18,6 +18,14 @@ dates
 - [x] [21nov 14-16](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131121): beaglebone black setup sound and install supercollider
 - [x] [28nov 14-16](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131128): beaglebone black supercollider together with python
 - [x] [05dec 14-16](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131205): beaglebone black as a standalone supercollider instrument
+	[fm algorithms](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131205#--fm-algorithms)
+	[download files to bbb](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131205#--download-files-to-bbb)
+	[starting supercollider](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131205#--starting-supercollider)
+	[connect sensors](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131205#--connect-sensors)
+	[customizing-thursday-sound](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131205#--customizing-thursday-sound)
+	[customizing-thursday-hardware](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131205#--customizing-thursday-hardware)
+	[quitting](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131205#--quitting)
+	[extra - change password](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131205#--extra---change-password)
 - [x] [12dec 14-16](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131212): arduino and supercollider together plus sensors, prepare own projects
 - [x] [19dec 14-16](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131219): more about sensors, beaglebone black, twitter, present own project ideas
 - [ ] 26dec: **NO CLASS**

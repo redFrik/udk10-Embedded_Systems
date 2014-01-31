@@ -30,8 +30,8 @@ Note: you can use the -N flag if you wish to overwrite an old file with the same
 
 Also note that if you get the 'WARNING: The certificate of raw.github.com is not trusted.' message, then set the wget flag `--no-check-certificate`.
 
-//--starting the instrument
----------------------------
+//--starting supercollider
+--------------------------
 Make sure an usb sound adapter is connected.
 
 * `jackd -dalsa -dhw:1,0 -p1024 -n3 -s &`

@@ -158,12 +158,18 @@ Basically you need to do the following on your beaglebone black...
 
 With the 5000mAh 5v battery fully charged, the system runs for about 9.5 hours.
 
-//--extra (advanced)
---------------------
-To make more GPIO pins available one need to disable hdmi. See <http://www.logicsupply.com/blog/2013/07/18/disabling-the-beaglebone-black-hdmi-cape/>
+//--extra: disable hdmi
+-----------------------
+(Advanced) To make more GPIO pins available one need to disable hdmi. See <http://www.logicsupply.com/blog/2013/07/18/disabling-the-beaglebone-black-hdmi-cape/>
+* `sudo mkdir /mnt/boot`
+* `sudo mount /dev/mmcblk0p1 /mnt/boot`
+* `sudo pico /mnt/boot/uEnv.txt`
+* add the following on the optargs line (line 2)...
+* `capemgr.disable_partno=BB-BONELT-HDMI,BB-BONELT-HDMIN,BB-BONE-EMMC-2G`
+* `sudo reboot`
 
-//--extra
----------
+//--extra: hearbeat
+-------------------
 To turn off the annoying and bright heartbeat led, you can do the following...
 
 * `cd /sys/class/leds/beaglebone\:green\:usr0`
@@ -180,8 +186,8 @@ Though this change will not survive restarts. To make the heartbeat go away perm
 * add the following line somewhere before exit 0
 * `echo none > /sys/class/leds/beaglebone\:green\:usr0/trigger # turn off heartbeat led`
 
-//--extra2
-----------
+//--extra: power consumption
+----------------------------
 To reduce power consumption a bit (my bbb takes around 350mA in idle mode with wlan adapter connected and jackd+sc+python running), you can decrease the cpu speed.
 
 * `sudo apt-get install cpufrequtils`

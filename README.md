@@ -46,10 +46,10 @@ dates
 	[copy-files-from-laptop-to-bbb](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131128#--copy-files-from-laptop-to-bbb),
 	[sending-osc-from-python-to-sc](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131128#--sending-osc-from-python-to-sc),
 	[receiving-osc-in-python](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131128#--receiving-osc-in-python),
-	[extra](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131128#--extra),
+	[extra-wlanwifi](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131128#--extra-wlanwifi),
 	[links](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131128#--links)
 - [x] [05dec 14-16](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131205): beaglebone black as a standalone supercollider instrument:
-	[fm-algorithms](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131205#--fm-algorithms)
+	[fm-algorithms](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131205#--fm-algorithms),
 	[download-files-to-bbb](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131205#--download-files-to-bbb),
 	[starting-supercollider](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131205#--starting-supercollider),
 	[connect-sensors](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131205#--connect-sensors),
@@ -58,7 +58,29 @@ dates
 	[quitting](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131205#--quitting),
 	[extra-change-password](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131205#--extra-change-password)
 - [x] [12dec 14-16](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131212): arduino and supercollider together plus sensors, prepare own projects
+	[arduino-hardware](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131212#--arduino-hardware),
+	[arduino-ide](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131212#--arduino-ide),
+	[programming-the-board](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131212#--programming-the-board),
+	[serial-communication-arduino---laptop](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131212#--serial-communication-arduino---laptop),
+	[digital-inputs](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131212#--digital-inputs),
+	[analog-inputs](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131212#--analog-inputs),
+	[serial-communication-laptop---arduino](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131212#--serial-communication-laptop---arduino),
+	[digital-outputs](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131212#--digital-outputs),
+	[pwm-analog-outputs](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131212#--pwm-analog-outputs),
+	[reading-sensors-in-sc](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131212#--reading-sensors-in-sc),
+	[controlling-leds-from-sc](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131212#--controlling-leds-from-sc),
+	[extra](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131212#--extra),
+	[extra2](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131212#--extra2),
+	[extra3](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131212#--extra3),
+	[links](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131212#--links)
 - [x] [19dec 14-16](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131219): more about sensors, beaglebone black, twitter, present own project ideas
+	[autostart](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131219#--autostart),
+	[autostart-jack-and-sc](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131219#--autostart-jack-and-sc),
+	[turning-off-with-a-button](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131219#--turning-off-with-a-button),
+	[thursday-instrument-autostart](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131219#--thursday-instrument-autostart),
+	[orfi_twitter](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131219#--orfi_twitter),
+	[extra-disable-hdmi](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131219#--extra-disable-hdmi)
+	[extra2](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131219#--extra2)
 - [ ] 26dec: **NO CLASS**
 - [ ] 02jan: **NO CLASS**
 - [x] [09jan 14-17](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk140109): own projects

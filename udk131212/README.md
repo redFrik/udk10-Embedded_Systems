@@ -259,8 +259,8 @@ Upload the [supercolliderToArduino_advanced.ino](https://raw.github.com/redFrik/
 ===============================
 Start to think of a project you want to realize and work with in jan-feb. Be prepared to present it next time.
 
-//--extra
----------
+//--extra: emf
+--------------
 Last a small little arduino project that would actually fit very well on a beaglebone black (there it's easier to run it standalone on batteries and no laptop needed).
 
 * first see <http://www.aaronalai.com/emf-detector>
@@ -272,14 +272,14 @@ Last a small little arduino project that would actually fit very well on a beagl
 
 ![emf](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/scEMF.jpg)
 
-//--extra2
-----------
+//--extra: ldr
+--------------
 To connect a light sensor or some other sensor with varying resistance (like temperature, flex and fsr), you'll need an additional resistor to create a [voltage divider](https://learn.sparkfun.com/tutorials/voltage-dividers/applications). This extra resistor acts like a balance to the light sensor and should have roughly the same value as the sensor. 10Kohm is a good standard value to start with. See this picture on how to connect it.
 
 ![simple_analog_read2](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131212/simple_analog_read2.jpg)
 
-//--extra3
-----------
+//--extra: pd
+-------------
 If you are running Windows, the SerialPort in SuperCollider is not available. One workaround is to run a PureData patch in the background. The pd patch reads serial data from the arduino and then sends it to sc via osc.
 
 * in arduino ide upload Examples/Firmata/StandardFirmata

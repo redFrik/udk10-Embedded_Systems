@@ -52,8 +52,8 @@ Also note that it's usually safest to turn off the beaglebone first before makin
 
 Now one of the two digital sensors should be starting and stopping the sound (by controlling the amplitude), and the other sensors set different parameters that changes the sound. The sound is a fm-synth based on one of the the fm_algorithms above.
 
-//--customizing the sound
--------------------------
+//--customizing thursday sound
+------------------------------
 The mapping of sensor values to sound parameters can be easily changed. You can exchange sensors or give them different functionality by editing the scd file in supercollider (using pico locally or edit it on your laptop and then upload via scp).
 
 This part of the code is for mapping. Edit some things there and change values to see what happens.
@@ -73,8 +73,8 @@ var amp= d1.lagud(0.01, 0.5);
 
 If you know supercollider you can of course write your own sound synthesis from scratch, or adapt some old code you have.
 
-//--customizing the hardware
-----------------------------
+//--customizing thursday hardware
+---------------------------------
 You can also easily add more sensors. Then change in the thursday.py file and add the ones you need under settings. Here we add two more analog (total 4) and 1 more digital (total 3)...
 
 ```
@@ -108,8 +108,8 @@ Quit supercollider by pressing `ctrl+c` and then do...
 * `pkill jackd`
 * `sudo halt` # turns off the bbb
 
-//--extra
----------
+//--extra: change password
+--------------------------
 As always it is recommended to change the default password.
 
 * `sudo passwd debian`

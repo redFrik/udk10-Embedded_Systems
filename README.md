@@ -69,9 +69,9 @@ dates
 	[pwm-analog-outputs](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131212#--pwm-analog-outputs),
 	[reading-sensors-in-sc](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131212#--reading-sensors-in-sc),
 	[controlling-leds-from-sc](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131212#--controlling-leds-from-sc),
-	[extra](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131212#--extra),
-	[extra2](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131212#--extra2),
-	[extra3](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131212#--extra3),
+	[extra-emf](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131212#--extra-emf),
+	[extra-ldr](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131212#--extra-ldr),
+	[extra-pd](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131212#--extra-pd),
 	[links](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131212#--links)
 - [x] [19dec 14-16](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131219): more about sensors, beaglebone black, twitter, present own project ideas
 	[autostart](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131219#--autostart),
@@ -79,14 +79,24 @@ dates
 	[turning-off-with-a-button](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131219#--turning-off-with-a-button),
 	[thursday-instrument-autostart](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131219#--thursday-instrument-autostart),
 	[orfi_twitter](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131219#--orfi_twitter),
-	[extra-disable-hdmi](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131219#--extra-disable-hdmi)
-	[extra2](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131219#--extra2)
+	[extra-disable-hdmi](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131219#--extra-disable-hdmi),
+	[extra-hearbeat](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131219#--extra-hearbeat),
+	[extra-power-consumption](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131219#--extra-power-consumption)
 - [ ] 26dec: **NO CLASS**
 - [ ] 02jan: **NO CLASS**
 - [x] [09jan 14-17](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk140109): own projects
+	[arduino-to-supercollider](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk140109#--arduino-to-supercollider),
+	[relay](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk140109#--relay),
+	[rotary](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk140109#--rotary),
 - [x] [16jan 14-17](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk140116): own projects
+	[using-hid-in-bbb](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk140116#--using-hid-in-bbb),
+	[rotary-encoder](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk140116#--rotary-encoder)
 - [x] [23jan 14-17](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk140123): own projects
+	[start-stop-button](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk140123#--start-stop-button),
+	[servo-with-bbb](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk140123#--servo-with-bbb),
+	[reflashing-the-emmc](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk140123#--reflashing-the-emmc)
 - [x] [30jan 14-17](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk140130): own projects
+	[11-digital-inputs](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk140130#--11-digital-inputs)
 - [ ] [06feb 14-17] own projects
 - [ ] 13feb: **NO CLASS**
 

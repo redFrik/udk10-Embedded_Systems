@@ -11,13 +11,13 @@ room111, UdK, medienhaus, kleistpark
 dates
 -----
 - [x] [17oct 14-16](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131017): raspberry pi overview, introduction, ssh login, getting around and making sound:
-	[4-channel-video-player](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131017#--4-channel-video-player),
-	[96-channel-pwm-led-driver](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131017#--96-channel-pwm-led-driver),
-	[operating-systems](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131017#--operating-systems),
-	[minimum-requirements](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131017#--minimum-requirements),
-	[basic-preparation-and-startup](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131017#--basic-preparation-and-startup),
-	[running-sc-on-rpi-raspbian](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131017#--running-sc-on-rpi-raspbian),
-	[links](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131017#--links)
+	- [4-channel-video-player](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131017#--4-channel-video-player)
+	- [96-channel-pwm-led-driver](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131017#--96-channel-pwm-led-driver)
+	- [operating-systems](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131017#--operating-systems)
+	- [minimum-requirements](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131017#--minimum-requirements)
+	- [basic-preparation-and-startup](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131017#--basic-preparation-and-startup)
+	- [running-sc-on-rpi-raspbian](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131017#--running-sc-on-rpi-raspbian)
+	- [links](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131017#--links)
 - [ ] [24oct] **NO CLASS** (design workshop)
 - [ ] 31oct: **NO CLASS**
 - [ ] 07nov: **NO CLASS**

@@ -106,8 +106,8 @@ To run the file on the bbb do the following...
 1. `jackd -dalsa -dhw:1,0 -p1024 -n3 -s &`
 2. `sclang mycode.scd`
 
-//--extra
----------
+//--extra: python experiments
+-----------------------------
 Some simple python experiments. Type `pico mylittleprogram.py` and add this...
 ```python
 import time

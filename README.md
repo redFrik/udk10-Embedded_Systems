@@ -40,7 +40,7 @@ dates
 	- [get-low-latency-audio](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131121#--get-low-latency-audio)
 	- [backup](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131121#--backup)
 	- [loading-files](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131121#--loading-files)
-	- [extra](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131121#--extra)
+	- [extra-python-experiments](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131121#--extra-python-experiments)
 	- [links](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131121#--links)
 - [x] [28nov 14-16](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131128): beaglebone black supercollider together with python:
 	- [copy-files-from-laptop-to-bbb](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131128#--copy-files-from-laptop-to-bbb)

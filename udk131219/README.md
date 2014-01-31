@@ -24,7 +24,7 @@ Here is how to create and set up a bash script that will start when you turn on 
 * `pico autostart_test` # create a textfile in home
 * add the following (and press ctrl+o to save and ctrl+x to exit as usual)
 
-```
+```bash
 #!/bin/bash
 su debian -c "jackd -dalsa -dhw:1,0 -p1024 -n3 -s &"
 sleep 1
@@ -81,7 +81,7 @@ Last, to automatically start this button-stop-python-program, we can edit the au
 * `pico autostart_test`
 * add two lines and make it look like this (and press ctrl+o to save and ctrl+x to exit as usual)
 
-```
+```bash
 #!/bin/bash
 python /home/debian/autostart_stop.py & # added for stop button support
 sleep 1
@@ -102,7 +102,7 @@ To add autostart and a stop button to the [thursday instrument](https://github.c
 * `pico thursday_autostart` # create a textfile in home
 * add the following (and press ctrl+o to save and ctrl+x to exit as usual)
 
-```
+```bash
 #!/bin/bash
 python /home/debian/thursday+.py &
 sleep 1

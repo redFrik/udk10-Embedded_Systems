@@ -26,7 +26,7 @@ To program the board you'll normally use the arduino ide. Download and install i
 * select the serial port in the menu Tools/Serial Port (mine is called `/dev/tty.usbserial-A101NB76`)
 * type in the following code and click the upload button in the ide...
 
-```
+```cpp
 void setup() {
 }
 void loop() {
@@ -49,7 +49,7 @@ Troubleshooting / common mistakes:
 --------------------------------------------
 To send data from (and to) the arduino board we normally use the serial port. Type in the following arduino program and click upload again.
 
-```
+```cpp
 //simple serial counter example
 byte cnt= 0;
 void setup() {
@@ -73,7 +73,7 @@ This is the ascii representation of the (8bit) numbers 0-255.
 ------------------
 Reading digital sensors is easy with the digitalRead() command. 
 
-```
+```cpp
 //simple digital read
 void setup() {
   Serial.begin(38400);  //open port and set baudrate - must match in laptop
@@ -102,7 +102,7 @@ Note: A and B are really the numbers 65 and 66. Compare in supercollider: `65.as
 -----------------
 On the standard arduino board there are 6 analog inputs (A0-A5). They read voltage with a 10bit resolution (values 0-1023).
 
-```
+```cpp
 //simple analog read
 void setup() {
   Serial.begin(38400);  //open port and set baudrate - must match in laptop
@@ -126,7 +126,7 @@ void loop() {
 --------------------------------------------
 We can also send serial data to the arduino board. Here is a simple example that makes the arduino board just add one and send back all the data bytes it receives.
 
-```
+```cpp
 //simple serial receive and send example
 void setup() {
   Serial.begin(38400);  //open port and set baudrate - must match in laptop
@@ -149,7 +149,7 @@ Again open the serial monitor, set baudrate 38400 and type something in the uppe
 The pins 2-13 on a standard arduino can also act as outputs (more pins are available on other models, and you can also try 0-1 but only if you're not using the serial port).
 So here we will use pin 6, but change it's function to an output and make it turn on/off a led.
 
-```
+```cpp
 //simple digital output from serial commands
 void setup() {
   Serial.begin(38400);  //open port and set baudrate - must match in laptop
@@ -183,7 +183,7 @@ PWM stands for pulse-width modulation and this can be used to fade leds in an an
 
 Note that we can only use the pins marked with `~`.
 
-```
+```cpp
 //simple analog (pwm) output from serial commands
 void setup() {
   Serial.begin(38400);  //open port and set baudrate - must match in laptop
@@ -221,7 +221,7 @@ Instead of the serial monitor used above, we can do the same with supercollider!
 
 So with the last sketch loaded (simple analog (pwm) output from serial commands just above), try the following in supercollider...
 
-```
+```cpp
 SerialPort.listDevices;//this will post available ports. copy the name from here to the line below
 
 (

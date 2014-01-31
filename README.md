@@ -24,8 +24,24 @@ dates
 - [x] [14nov 14-16](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131114): beaglebone black overview, debian setup and installation:
 	[preparation-first-time-only](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131114#--preparation-first-time-only),
 	[startup](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131114#--startup),
-	[logging-in](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131114#--logging-in)
+	[logging-in](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131114#--logging-in),
+	[installing-software](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131114#--installing-software),
+	[a-simple-python-program](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131114#--a-simple-python-program),
+	[second-python-program](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131114#--second-python-program),
+	[third-program](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131114#--third-program),
+	[send-osc-example](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131114#--send-osc-example),
+	[turning-off](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131114#--turning-off),
+	[links](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131114#--links)
 - [x] [21nov 14-16](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131121): beaglebone black setup sound and install supercollider:
+	[install-alsa--test-sound](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131121#--install-alsa--test-sound),
+	[install-jack](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131121#--install-jack),
+	[install-supercollider-37alpha0](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131121#--install-supercollider-37alpha0),
+	[start-sc](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131121#--start-sc),
+	[get-low-latency-audio](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131121#--get-low-latency-audio),
+	[backup](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131121#--backup),
+	[loading-files](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131121#--loading-files),
+	[extra](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131121#--extra),
+	[links](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131121#--links)
 - [x] [28nov 14-16](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131128): beaglebone black supercollider together with python:
 - [x] [05dec 14-16](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131205): beaglebone black as a standalone supercollider instrument:
 	[fm-algorithms](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131205#--fm-algorithms)

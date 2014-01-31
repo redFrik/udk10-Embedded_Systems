@@ -109,7 +109,7 @@ To run the file on the bbb do the following...
 //--extra
 ---------
 Some simple python experiments. Type `pico mylittleprogram.py` and add this...
-```
+```python
 import time
 
 str= "hello udk!"

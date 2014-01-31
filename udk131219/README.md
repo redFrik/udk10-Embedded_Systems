@@ -58,7 +58,7 @@ If we autostart something and run without network cables etc, we also want to be
 * `pico autostart_stop.py` # create a textfile in home
 * add the following (and press ctrl+o to save and ctrl+x to exit as usual)
 
-```
+```python
 import Adafruit_BBIO.GPIO as GPIO
 import time
 import os

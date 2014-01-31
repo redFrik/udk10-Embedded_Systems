@@ -85,7 +85,7 @@ our first little python program.  to type it in we need a text editor.
 
 then type in the following.  note: in python indentation (tabs) are important
 
-```
+```python
 import time
 val= 0
 while True:
@@ -110,7 +110,7 @@ again create the file and start the text editor with...
 
 and then type this (or copy and paste - it also works over ssh)...
 
-```
+```python
 import Adafruit_BBIO.GPIO as GPIO
 import time
 GPIO.setup("P9_41", GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
@@ -136,7 +136,7 @@ here we read an analog sensor and print the result.
 
 * `pico analogtest.py`
 
-```
+```python
 import Adafruit_BBIO.ADC as ADC
 import time
 ADC.setup()
@@ -158,7 +158,7 @@ in this example we read one digital and one analog sensor and send it via open s
 
 * `pico osctest.py`
 
-```
+```python
 import Adafruit_BBIO.ADC as ADC
 import Adafruit_BBIO.GPIO as GPIO
 import time

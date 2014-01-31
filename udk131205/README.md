@@ -77,7 +77,7 @@ If you know supercollider you can of course write your own sound synthesis from 
 ---------------------------------
 You can also easily add more sensors. Then change in the thursday.py file and add the ones you need under settings. Here we add two more analog (total 4) and 1 more digital (total 3)...
 
-```
+```python
 analog_sensors= ["P9_39", "P9_40", "P9_37", "P9_38"] # customize here and add your own sensors
 digital_sensors= ["P9_41", "P9_42", "P9_31"] # customize here  and add your own sensors
 ```

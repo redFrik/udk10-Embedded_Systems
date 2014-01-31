@@ -20,7 +20,7 @@ first make sure you have installed pip and pyosc (+ git and the rest) following 
 now connect a joystick or some other device and try the code below. (make a new file with `pico hidtest.py` and copy the code, ctrl+o and ctrl+x to save and exit, run it with `sudo python hidtest.py`)
 this should list the name and some other info of all the connected devices.
 
-```
+```python
 import hid
 
 for d in hid.enumerate(0, 0):
@@ -33,7 +33,7 @@ for d in hid.enumerate(0, 0):
 this second example show how to send data from the device to sc. make sure you edit the `name` variable to match your device (check what is printed in the example above).
 and remember to remove the debug print statement after you got it working - it slows down the data.
 
-```
+```python
 import OSC
 import hid
 
@@ -91,7 +91,7 @@ s.waitForBoot{
 ------------------
 here is a python example of how to read a rotary encoder with the beaglebone black.
 
-```
+```python
 #for reading a rotary encoder with bbb
 #connect middle pin to 3v3 and the two outer pins to P9_41 and P9_42
 

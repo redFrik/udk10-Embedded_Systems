@@ -15,7 +15,7 @@ see pinout diagram here... <http://www.alexanderhiam.com/blog/beaglebone-pinout/
 * `pico eleven_digital.py`
 * paste the following python code and save and exit (ctrl+o, ctrl+x)
 
-```
+```python
 # reading 11 digital inputs and send over to sc via osc
 # not very compact code - written for clarity
 import Adafruit_BBIO.GPIO as GPIO

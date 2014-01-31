@@ -15,7 +15,7 @@ the resistor is a 10K and the diode a 1N914.
 * `pico start_stop.py`
 * add the following program...
 
-```
+```python
 #a little python program that waits for P9_23 to go low and then turn off the bbb
 import Adafruit_BBIO.GPIO as GPIO
 import time
@@ -45,7 +45,7 @@ here's an example of controlling two servo motors from supercollider.
 
 put the following code in to a file with `pico pwm_control.py`.  run it with `sudo python pwm_control.py`
 
-```
+```python
 # simple program to control two servos via pwm on a beaglebone black running sc
 
 import Adafruit_BBIO.PWM as PWM

@@ -43,6 +43,11 @@ dates
 	[extra](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131121#--extra),
 	[links](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131121#--links)
 - [x] [28nov 14-16](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131128): beaglebone black supercollider together with python:
+	[copy-files-from-laptop-to-bbb](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131128#--copy-files-from-laptop-to-bbb),
+	[sending-osc-from-python-to-sc](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131128#--sending-osc-from-python-to-sc),
+	[receiving-osc-in-python](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131128#--receiving-osc-in-python),
+	[extra](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131128#--extra),
+	[links](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131128#--links)
 - [x] [05dec 14-16](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131205): beaglebone black as a standalone supercollider instrument:
 	[fm-algorithms](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131205#--fm-algorithms)
 	[download-files-to-bbb](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131205#--download-files-to-bbb),

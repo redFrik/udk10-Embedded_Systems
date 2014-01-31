@@ -56,8 +56,8 @@ Then in supercollider on your laptop type this...
 
 The osctest2 python program should print out `[123]`. Stop it with ctrl+c.
 
-//--extra
----------
+//--extra: wlan/wifi
+--------------------
 Optional - if you have a wlan usb stick like [this](http://www.reichelt.de/WLAN-Adapter/LOGILINK-WL0084B/3/index.html?&ACTION=3&LA=5&ARTICLE=120745&GROUPID=770&artnr=LOGILINK+WL0084B)
 
 * `sudo apt-get update`

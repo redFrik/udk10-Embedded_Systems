@@ -97,7 +97,7 @@ dates
 	- [reflashing-the-emmc](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk140123#--reflashing-the-emmc)
 - [x] [30jan 14-17](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk140130): own projects
 	- [11-digital-inputs](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk140130#--11-digital-inputs)
-- [ ] [06feb 14-17] own projects
+- [x] [06feb 14-17] own projects, presentations, hand back borrowed equipment
 - [ ] 13feb: **NO CLASS**
 
 links to previous semesters... <http://redfrik.github.io/udk00-Audiovisual_Programming/>

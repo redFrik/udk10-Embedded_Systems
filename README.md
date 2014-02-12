@@ -80,7 +80,7 @@ dates
 	- [thursday-instrument-autostart](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131219#--thursday-instrument-autostart)
 	- [orfi_twitter](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131219#--orfi_twitter)
 	- [extra-disable-hdmi](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131219#--extra-disable-hdmi)
-	- [extra-hearbeat](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131219#--extra-hearbeat)
+	- [extra-heartbeat](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131219#--extra-heartbeat)
 	- [extra-power-consumption](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131219#--extra-power-consumption)
 - [ ] 26dec: **NO CLASS**
 - [ ] 02jan: **NO CLASS**

@@ -168,8 +168,8 @@ With the 5000mAh 5v battery fully charged, the system runs for about 9.5 hours.
 * `capemgr.disable_partno=BB-BONELT-HDMI,BB-BONELT-HDMIN,BB-BONE-EMMC-2G`
 * `sudo reboot`
 
-//--extra: hearbeat
--------------------
+//--extra: heartbeat
+--------------------
 To turn off the annoying and bright heartbeat led, you can do the following...
 
 * `cd /sys/class/leds/beaglebone\:green\:usr0`

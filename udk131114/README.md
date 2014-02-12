@@ -7,7 +7,7 @@ the beaglebone black (bbb) <http://www.exp-tech.de/Mainboards/BeagleBone-Black.h
 
 besides the bbb itself you'll need a 5v power adapter, a +2gb sd card and an ethernet cable.
 
-sound input (electret mic) and output (active speakers, headphones or amplifier) is best handled with an usb soundcard. for example: <http://www.amazon.com/Virtual-5-1-surround-External-Sound-Card/dp/B000N35A0Y>
+sound input (electret mic) and output (active speakers, headphones or amplifier) is best handled with an usb soundcard. for example: <http://www.amazon.com/Virtual-5-1-surround-External-Sound-Card/dp/B000N35A0Y> or for better sound quality: <http://www.terratec.net/en/products/AUREON_Dual_USB_9842.html>.
 
 you can directly connect sensors to use as inputs (buttons, sliders, accelerometers etc), and actuators/outputs like leds and motors you can connect via small protective circuits or drivers.  the general purpose in and out pins (GPIO) can act as either inputs or outputs.
 

@@ -10,7 +10,7 @@ byte pwmPins[]= {5, 3, 9, 6, 11, 10};
 
 //--variables
 byte val, cnt= 0;
-byte data[]= {0, 0, 0, 0, 0, 0, 0, 0};
+byte data[]= {0, 0, 0, 0, 0, 0};
 
 void setup() {
   Serial.begin(38400);    //baudrate must match in sc

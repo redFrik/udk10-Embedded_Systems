@@ -194,7 +194,7 @@ while True:
 
 on your laptop start supercollider and run these two lines
 
-```
+```supercollider
 OSCFunc({|msg| msg.postln}, '/adc');
 OSCFunc({|msg| msg.postln}, '/dig');
 ```
@@ -203,7 +203,7 @@ it should print out the incoming sensor values.
 now you can use that to start synths, set parameters or whatever.
 
 if you get the error...
-```
+```supercollider
 Traceback (most recent call last):
   File "osctest.py", line 29, in <module>
     sc.send(msg)

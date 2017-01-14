@@ -91,7 +91,7 @@ When all the above is working i'd recommend to do a backup of your sd card.  On 
 To run supercollider code from a textfile, you write the code on your laptop, save it to a .scd file and copy it over.
 
 A simple example .scd file could look like this...
-```
+```supercollider
 s.waitForBoot({
 	a= {SinOsc.ar([400, 404], 0, 0.1)}.play;
 });

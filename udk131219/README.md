@@ -40,7 +40,7 @@ The above bash script will start jack and sclang after each other. We then need 
 * `pico autostart_test.scd`
 * add the following sc code, save and exit
 
-```
+```supercollider
 s.waitForBoot{
         {SinOsc.ar([400, 404], 0, 0.1)}.play;
 };

@@ -93,7 +93,7 @@ see this [adafruit tutorial](http://learn.adafruit.com/controlling-a-servo-with-
 
 the supercollider code is simple.  try something like this...
 
-```
+```supercollider
 n= NetAddr("192.168.1.53", 11000);	//edit to match bbb ip (or 127.0.0.1 if running sc on the bbb itself)
 (
 Routine.run({

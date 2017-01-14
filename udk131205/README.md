@@ -58,7 +58,7 @@ The mapping of sensor values to sound parameters can be easily changed. You can 
 
 This part of the code is for mapping. Edit some things there and change values to see what happens.
 
-```
+```supercollider
 //--map controllers - customize here
 var freq0= 400;
 var amp0= a1.lag(0.1);
@@ -84,7 +84,7 @@ digital_sensors= ["P9_41", "P9_42", "P9_31"] # customize here  and add your own 
 
 and then you also need to change in the thursday.scd file and add the inputs there...
 
-```
+```supercollider
 //also here adding 2 analog and 1 digital
 |p9_39= 900, p9_40= 900, p9_37= 900, p9_38= 900, p9_41= 0, p9_42= 0, p9_31= 0| //arguments - add more
 

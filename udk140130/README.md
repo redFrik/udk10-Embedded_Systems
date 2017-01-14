@@ -135,7 +135,7 @@ while True:
 * `pico eleven_digital.scd`
 * paste the following supercollider code and save and exit (ctrl+o, ctrl+x)
 
-```
+```supercollider
 //code for receiving 11 digital inputs
 s.waitForBoot{
 	Ndef(\snd00, {|freq= 0, amp= 0| Blip.ar(freq.lag(1), 11, amp.lag(0.1))!2}).play;

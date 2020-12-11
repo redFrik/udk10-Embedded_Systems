@@ -3,11 +3,11 @@
 
 _beaglebone black overview, debian setup and installation_
 
-the beaglebone black (bbb) <http://www.exp-tech.de/Mainboards/BeagleBone-Black.html> is a small linux computer that can run supercollider, puredata and lots of other programs.
+the beaglebone black (bbb) <https://www.exp-tech.de/plattformen/beaglebone-black/mainboards/5740/beaglebone-black-rev-c> is a small linux computer that can run supercollider, puredata and lots of other programs.
 
 besides the bbb itself you'll need a 5v power adapter, a +2gb sd card and an ethernet cable.
 
-sound input (electret mic) and output (active speakers, headphones or amplifier) is best handled with an usb soundcard. for example: <http://www.amazon.com/Virtual-5-1-surround-External-Sound-Card/dp/B000N35A0Y> or for better sound quality: <http://www.terratec.net/en/products/AUREON_Dual_USB_9842.html>.
+sound input (electret mic) and output (active speakers, headphones or amplifier) is best handled with an usb soundcard. for example: <http://www.amazon.com/Virtual-5-1-surround-External-Sound-Card/dp/B000N35A0Y> or for better sound quality: <https://www.terratec.de/details.php?artnr=10542>.
 
 you can directly connect sensors to use as inputs (buttons, sliders, accelerometers etc), and actuators/outputs like leds and motors you can connect via small protective circuits or drivers.  the general purpose in and out pins (GPIO) can act as either inputs or outputs.
 
@@ -15,9 +15,9 @@ you can directly connect sensors to use as inputs (buttons, sliders, acceleromet
 ---------------------------------
 
 note: some of these instructions are mac osx only.  for linux and windows you will need to figure out yourself how to do it.  the process is the same (transfer the img to the sd card), but the tools will be different.
-see <http://learn.adafruit.com/beaglebone-black-installing-operating-systems/overview> and follow the instructions for ubuntu (which is compatible with the debian img we are using).
+see <https://learn.adafruit.com/beaglebone-black-installing-operating-systems/overview> and follow the instructions for ubuntu (which is compatible with the debian img we are using).
 
-* go to <http://www.armhf.com/index.php/download/> and download the "BeageBone Black Debian Wheezy 7.2" image file.
+* go to <https://beagleboard.org/latest-images> and download the "BeageBone Black Debian Wheezy 7.2" image file.
 * (osx) unpack the .xz file with "The Unarchiver" (free on app store)
 * (osx) go to <http://ivanx.com/raspberrypi/> and download "Pi Filler".
 * (osx) start the pi filler program and follow the instructions (takes ~20min). basically the filler helps you to copy the debian disk image on to the sd card.
@@ -33,7 +33,7 @@ note: you can also connect the ethernet cable directly to your wlan router (if t
 
 //--logging in
 --------------
-to log in to the bbb from our laptop via ssh, we need to know the bbb's ip address.  this you can easiest find either by looking in the router status panel of connected devices, or using the LanScan.app (<http://www.iwaxx.com/lanscan/>, free on appstore).
+to log in to the bbb from our laptop via ssh, we need to know the bbb's ip address.  this you can easiest find either by looking in the router status panel of connected devices, or using the LanScan.app (<https://www.iwaxx.com/lanscan/>, free on appstore).
 
 * (osx) if you have the bbb connected directly to your mac, go to system preferences and sharing.  enable internet sharing (wlan to ethernet).
 * (osx) start LanScan, select interface in lower left corner (use bridge if internet sharing), press space to scan and see if it finds the ip of the bbb.
@@ -103,7 +103,7 @@ stop with ctrl+c
 
 //--second python program
 -------------------------
-this program will read a digital sensor and print the result.  we'll use pin 41 on port P9.  see <http://www.alexanderhiam.com/blog/beaglebone-pinout/>.
+this program will read a digital sensor and print the result.  we'll use pin 41 on port P9.  see <https://web.archive.org/web/20141024082937/http://www.alexanderhiam.com/blog/beaglebone-pinout/>.
 again create the file and start the text editor with...
 
 * `pico digitaltest.py`
@@ -225,7 +225,7 @@ avoid pulling the power.  that might corrupt the sd card and then you can't boot
 //--links
 ---------
 
-* <http://learn.adafruit.com/category/beaglebone>
-* <http://www.element14.com/community/community/knode/single-board_computers/next-gen_beaglebone/blog>
-* <http://www.michaelhleonard.com/raspberry-pi-or-beaglebone-black/>
-* <http://www.codecademy.com> and click python
+* <https://learn.adafruit.com/category/beaglebone>
+* <https://www.element14.com/community/community/designcenter/single-board-computers/next-genbeaglebone/blog>
+* <https://web.archive.org/web/20140924160643/http://www.michaelhleonard.com/raspberry-pi-or-beaglebone-black/>
+* <https://www.codecademy.com> and click python

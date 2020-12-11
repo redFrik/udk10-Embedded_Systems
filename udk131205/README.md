@@ -9,11 +9,11 @@ The 'instrument' consists of two programs. One written in python and the other o
 
 //--fm algorithms
 -----------------
-First an introduction to frequency modulation ([fm](http://en.wikipedia.org/wiki/Fm_synth)):
+First an introduction to frequency modulation ([fm](https://en.wikipedia.org/wiki/Frequency_modulation_synthesis)):
 
 On your laptop, open and check the files [fm_algorithms1.scd](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131205/fm_algorithms1.scd) and [fm_algorithms2.scd](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131205/fm_algorithms2.scd) from todays material. Try out different patches and note the difference in how the oscillators are connected.
 
-Try to replace `.add` with `.draw` to see a graphical overview over the oscillators. You will first need to install the rd_dot quark and graphviz (<http://www.graphviz.org>). I use version 2.34 on my mac osx 10.9.
+Try to replace `.add` with `.draw` to see a graphical overview over the oscillators. You will first need to install the rd_dot quark and graphviz (<https://www.graphviz.org>). I use version 2.34 on my mac osx 10.9.
 
 To install the rd_dot quark you'd type... `Quarks.checkoutAll` and `Quarks.install("rd_dot");` in supercollider (on your laptop) and then press 'p' when asked by the Terminal. Then if it worked and installed successfully, recompile sclang. Test it with `{SinOsc.ar}.draw;`. That line should have opened a window in graphviz that shows a connection diagram. Note: on mac osx you might need to force all filetypes of the type .dot open in graphviz. Do this by selecting a .dot file and get info in Finder - select open with... graphviz and apply for every file.
 

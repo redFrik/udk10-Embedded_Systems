@@ -12,9 +12,9 @@ Upload the `arduinoToSupercollider_twoAnalog.ino` to the arduino, connect sensor
 
 //--relay
 ---------
-An example of using 5v relays to control 220v mains power. This arduino sketch works on its own turning relays on/off in a custom sequence. Example relays... <http://dx.com/p/8-channel-relay-module-board-w-optocoupler-isolation-blue-works-with-official-arduino-boards-224064>
+An example of using 5v relays to control 220v mains power. This arduino sketch works on its own turning relays on/off in a custom sequence. Example relays... <https://www.dx.com/p/8-channel-relay-module-board-w-optocoupler-isolation-blue-works-with-official-arduino-boards-2028623.html>
 Upload the `relays.ino` and test with low voltage leds first. Then turn off everything, connect 220v wires to relay. Make sure no loose wires - tape or tie down on a table.
 
 //--rotary
 ----------
-A simple example for some leds in a circle... <https://www.sparkfun.com/products/11040>
+A simple example for some leds in a circle... <https://www.sparkfun.com/products/retired/11040>

@@ -10,7 +10,7 @@ an example of how to read 11 digital inputs with python and send to supercollide
 connect 11 digital sensors to the pins listed under settings and make them go to 3v3 (they are pulled to ground and this program detects high values).
 
 NOTE: it's very important to connect to 3v3 volt (and not 5v)!
-see pinout diagram here... <http://www.alexanderhiam.com/blog/beaglebone-pinout/>
+see pinout diagram here... <https://web.archive.org/web/20141024082937/http://www.alexanderhiam.com/blog/beaglebone-pinout/>
 
 * `pico eleven_digital.py`
 * paste the following python code and save and exit (ctrl+o, ctrl+x)

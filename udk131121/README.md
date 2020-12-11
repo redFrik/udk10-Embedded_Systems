@@ -10,7 +10,7 @@ The below assume you've done all the instructions from [previous](https://github
 
 //--install alsa + test sound
 -----------------------------
-Connect the ethernet cable and power like last week and make sure you have connected the usb soundcard and headphones/speaker.  The soundcard i used is [this](http://dx.com/p/virtual-5-1-surround-usb-2-0-external-sound-card-22475) one, but it should also work with higher quality usb adapters.
+Connect the ethernet cable and power like last week and make sure you have connected the usb soundcard and headphones/speaker.  The soundcard i used is [this](https://www.dx.com/p/virtual-5-1-surround-usb-2-0-external-sound-card-2006642.html) one, but it should also work with higher quality usb adapters.
 
 * `sudo apt-get install alsa-base`
 * `sudo depmod`
@@ -131,7 +131,7 @@ And stop with ctrl+c
 
 //--links:
 ----------
-* <http://supercollider.github.io/development/building-beagleboneblack.html> here i put the same thing but a bit simplified
-* <http://learnpythonthehardway.org/book/>
-* <http://www.eliteraspberries.com/blog/2013/09/installing-debian-on-the-beaglebone-black.html> more advanced info about installing debian on bbb
-* <http://nodebox.net/code/index.php/Home> nice python 2d graphics program
+* <https://github.com/supercollider/supercollider/blob/develop/README_BEAGLEBONE_BLACK.md> here i put the same thing but a bit simplified
+* <https://learnpythonthehardway.org/book/>
+* <https://web.archive.org/web/20141126103331/http://www.eliteraspberries.com/blog/2013/09/installing-debian-on-the-beaglebone-black.html> more advanced info about installing debian on bbb
+* <https://www.nodebox.net/code/index.php/Home> nice python 2d graphics program

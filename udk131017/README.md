@@ -1,7 +1,7 @@
 quick general course introduction
 --------------------
 
-* links to previous semesters... <http://redfrik.github.io/udk00-Audiovisual_Programming/>
+* links to previous semesters... <https://redfrik.github.io/udk00-Audiovisual_Programming/>
 * and dates + times for this course... <https://github.com/redFrik/udk10-Embedded_Systems> <-save this page
 * note in january and february we will do 3h sessions to catch up
 * this first time we will play with raspberry pi, but then concentrate on beaglebone black.  many things will work the same on the rpi and the bbb.
@@ -23,23 +23,23 @@ demo projects
 
 //--4 channel video player
 --------------------
-for the dance piece Ich(a) by Zufit Simon (<http://tanzforumberlin.de/trailer369.php>) i needed a way to send out 4 separate hi-quality video streams.  the videos didn't need to play back in frame sync, but they had to have a manual trigger to go to black and start the next video.
+for the dance piece Ich(a) by Zufit Simon (<https://www.tanzforumberlin.de/produktion/icha/>) i needed a way to send out 4 separate hi-quality video streams.  the videos didn't need to play back in frame sync, but they had to have a manual trigger to go to black and start the next video.
 on the board is a small python program that starts automatically.  it reads a button and uses omxplayer to cycle between mp4 files.  the black out is just a short mp4 with only black frames.
 
-see <http://www.fredrikolofsson.com/f0blog/?q=node/593> for the python code and installation instructions.
+see <https://fredrikolofsson.com/f0blog/cheap-4-channel-videoplayer/> for the python code and installation instructions.
 
 //--96 channel pwm led driver
 --------------------
 for the piece redAlert to be premiered in stockholm 9nov i wanted to control hundreds of leds.  i built three boxes with raspberry pis that could drive 32 channels each.  i control them from supercollider with osc via wifi.  here i used model A because it is cheaper but mainly because it requires less current.  without the leds the rpi + wlan + driver circuit draws 360mA.  with all the 32*3 leds turned on it's 1000mA total.
 
-see <http://www.fredrikolofsson.com/f0blog/?q=node/599> for schematics, code and pictures.
+see <https://fredrikolofsson.com/f0blog/redalertlight/> for schematics, code and pictures.
 
 setting up a raspberry pi
 ====================
 
 //--operating systems
 --------------------
-there are many different systems you can run on a raspberry pi.  most of them are linux distributions build on debian.  i can recommend the standard raspbian <http://www.raspberrypi.org/downloads>
+there are many different systems you can run on a raspberry pi.  most of them are linux distributions build on debian.  i can recommend the standard raspbian <https://www.raspberrypi.org/software/operating-systems/>
 
 or for a minimal headless (no windows, gui etc - only terminal) install you can try moebius <http://moebiuslinux.sourceforge.net>
 
@@ -62,10 +62,10 @@ additional stuff if you want to use it like a standalone computer...
 //--basic preparation and startup
 --------------------
 you will need to do a few things before booting the pi for the first time...
-* download an operating system (here we will use [Raspbian](http://www.raspberrypi.org/downloads))
+* download an operating system (here we will use [Raspbian](https://www.raspberrypi.org/software/operating-systems/))
 * put the os on a sd card (on osx it is easiest with Pi Filler <http://ivanx.com/raspberrypi/>)
 * connect ethernet and 5v power to the pi
-* find the ip address of the rpi (on osx it is easy with the free app lanscan <http://www.iwaxx.com/lanscan/>), or look in your router settings (web admin/settings pages).
+* find the ip address of the rpi (on osx it is easy with the free app lanscan <https://www.iwaxx.com/lanscan/>), or look in your router settings (web admin/settings pages).
 * (on osx you can also connect the pi directly to you mac via ethernet and turn internet sharing on.  then figure out the ip with lanscan or ping broadcast.)
 
 logging in for the first time:
@@ -103,11 +103,11 @@ notes:
 //--links
 --------------------
 some random projects...
-* <http://www.gundersen.net/raspberry-pi-making-it-slimmer/>
-* <http://www.makeuseof.com/tag/how-to-build-a-raspberry-pi-twitter-bot/>
-* <http://www.youtube.com/watch?v=KYO9N4kDK_o> (sonic pi is a simplified supercollider)
+* <https://gundersen.net/raspberry-pi-making-it-slimmer/>
+* <https://www.makeuseof.com/tag/how-to-build-a-raspberry-pi-twitter-bot/>
+* <https://www.youtube.com/watch?v=KYO9N4kDK_o> (sonic pi is a simplified supercollider)
 
 some getting started guides...
-* <http://learn.adafruit.com/category/raspberry-pi> the best - lots of good projects and guides here
-* <http://www.engadget.com/2012/09/04/raspberry-pi-getting-started-guide-how-to/> more basic
-* <http://www.amazon.com/Getting-Started-Raspberry-Pi-Make/dp/1449344216> an ok book
+* <https://learn.adafruit.com/category/raspberry-pi> the best - lots of good projects and guides here
+* <https://web.archive.org/web/20150310040350/http://www.engadget.com/2012/09/04/raspberry-pi-getting-started-guide-how-to/> more basic
+* <https://www.amazon.com/Getting-Started-Raspberry-Pi-Make/dp/1449344216> an ok book

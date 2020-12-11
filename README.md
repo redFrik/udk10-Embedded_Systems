@@ -3,7 +3,7 @@ udk-avprogramming 2013-2014_WS
 
 Olofsson: Audiovisual programming - Embedded Systems
 
-Fast, small and cheap linux computers have recently become widely available. In this course we will experiment with two of them: the [BeagleBone Black](http://beagleboard.org/Products/BeagleBone%20Black) and the [Raspberry Pi](http://raspberrypi.org). The plan is to use these platforms as stepping stones for learning about programming, networks, electronics and more. And the general goal is to build small wireless systems that do interesting stuff.
+Fast, small and cheap linux computers have recently become widely available. In this course we will experiment with two of them: the [BeagleBone Black](https://beagleboard.org/black) and the [Raspberry Pi](https://www.raspberrypi.org). The plan is to use these platforms as stepping stones for learning about programming, networks, electronics and more. And the general goal is to build small wireless systems that do interesting stuff.
 In more detail we will try connecting sensor across the internet, code synthetic sound in SuperCollider, embed computers into soft material and find suitable batteries and speakers for it all. The software put to use will mainly be SuperCollider and Python. The hardware will be provided as a loan.
 
 room111, UdK, medienhaus, kleistpark
@@ -100,4 +100,4 @@ dates
 - [x] [06feb 14-17] own projects, presentations, hand back borrowed equipment
 - [ ] 13feb: **NO CLASS**
 
-links to previous semesters... <http://redfrik.github.io/udk00-Audiovisual_Programming/>
+links to previous semesters... <https://redfrik.github.io/udk00-Audiovisual_Programming/>

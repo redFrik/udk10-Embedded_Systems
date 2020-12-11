@@ -73,7 +73,7 @@ while True:
 	time.sleep(0.5) # wait half a second
 ```
 
-You can now test this python program with the command `sudo python autostart_stop.py &`. After you run that connect a cable between P9_23 and 3.3v (Note: take extra care that the pins you are connecting to are the right ones. See <http://www.alexanderhiam.com/blog/beaglebone-pinout/>). After connecting the pin 23 (it's enough to just hold it to 3.3v more than 0.5sec), the system should turn itself off. Wait until all the blue leds are off (it takes around 25seconds) and then you can safely remove the 5v power.
+You can now test this python program with the command `sudo python autostart_stop.py &`. After you run that connect a cable between P9_23 and 3.3v (Note: take extra care that the pins you are connecting to are the right ones. See <https://web.archive.org/web/20141024082937/http://www.alexanderhiam.com/blog/beaglebone-pinout/>). After connecting the pin 23 (it's enough to just hold it to 3.3v more than 0.5sec), the system should turn itself off. Wait until all the blue leds are off (it takes around 25seconds) and then you can safely remove the 5v power.
 If you wish to quickly start again, press the small power button next to the ethernet jack on the bbb.
 
 Last, to automatically start this button-stop-python-program, we can edit the autostart_test script we made above.
@@ -118,17 +118,17 @@ su debian -c "sclang /home/debian/thursday.scd"
 ----------------
 This is a small project I built using the following:
 
-* [beaglebone black](http://www.exp-tech.de/Mainboards/BeagleBone-Black.html)
-* [5v battery pack](http://www.reichelt.de/Mobile-Powerpacks/POWERBANK-5000/3//index.html?ACTION=3&GROUPID=4491&ARTICLE=102042&SEARCH=Mobile%20Powerpacks&SHOW=1&OFFSET=500&)
-* [4-port usb hub](http://www.reichelt.de/USB-Hubs/MANHATTAN-160599/3//index.html?ACTION=3&GROUPID=6103&ARTICLE=94684&SEARCH=MANHATTAN%20160599&SHOW=1&OFFSET=500&)
-* [logilink nano wlan usb adapter](http://www.reichelt.de/WLAN-Adapter/LOGILINK-WL0084B/3//index.html?ACTION=3&GROUPID=770&ARTICLE=120745&SEARCH=logilink%20nano&SHOW=1&OFFSET=500&)
-* [3d sound audio usb adapter](http://dx.com/p/virtual-5-1-surround-usb-2-0-external-sound-card-22475)
+* [beaglebone black](https://www.exp-tech.de/plattformen/beaglebone-black/mainboards/5740/beaglebone-black-rev-c)
+* [5v battery pack](https://www.reichelt.de/nicht-mehr-lieferbar-powerbank-5000-p102042.html?GROUPID=4491&SEARCH=Mobile%20Powerpacks&SHOW=1&OFFSET=500&&r=1)
+* [4-port usb hub](https://www.reichelt.de/nicht-mehr-lieferbar-manhattan-160599-p94684.html?GROUPID=6103&SEARCH=MANHATTAN%20160599&SHOW=1&OFFSET=500&&r=1)
+* [logilink nano wlan usb adapter](https://www.reichelt.de/wlan-adapter-usb-150-mbit-s-logilink-wl0084e-p169760.html?&trstct=pos_3&nbc=1)
+* [3d sound audio usb adapter](https://www.dx.com/p/virtual-5-1-surround-usb-2-0-external-sound-card-2006642.html)
 * [roxcore active speaker](http://www.kjell.com/sortiment/dator-kringutrustning/datortillbehor/hogtalare-headset/mobil-och-mp3-hogtalare/roxcore-portabel-hogtalare-svart-p23133)
-* [uln2803a darlington array](http://www.reichelt.de/ICs-U-ZTK-/ULN-2803A/3//index.html?ACTION=3&GROUPID=2921&ARTICLE=22085&SEARCH=uln2803a&SHOW=1&OFFSET=500&)
-* [six 120ohm smd resistors](http://www.reichelt.de/SMD-1206-100-Ohm-910-Ohm/SMD-1-4W-120/3//index.html?ACTION=3&GROUPID=3088&ARTICLE=18251&SEARCH=smd%201%2F4w%20120&SHOW=1&OFFSET=500&)
-* [double row pin headers](http://www.reichelt.de/Stiftleisten/SL-2X25G-2-54/3//index.html?ACTION=3&GROUPID=3220&ARTICLE=19494&SEARCH=SL%202X25G%202%2C54&SHOW=1&OFFSET=500&)
-* [stripboard](http://en.wikipedia.org/wiki/Stripboard)
-* [orfi pillow](http://musicalfieldsforever.com/orfi_conc.html) left over from an old installation i did together with musicalfieldsforever
+* [uln2803a darlington array](https://www.reichelt.de/eight-darlington-arrays-dil-18-uln-2803a-p22085.html?&trstct=pos_1&nbc=1)
+* [six 120ohm smd resistors](https://www.reichelt.de/smd-widerstand-1206-120-ohm-250-mw-5--rnd-1206-5-120-p183371.html?search=1206+120)
+* [double row pin headers](https://www.reichelt.de/2x25pol-stiftleiste-gerade-rm-2-54-sl-2x25g-2-54-p19494.html?search=Stiftleisten+2X25G)
+* [stripboard](https://en.wikipedia.org/wiki/Stripboard)
+* [orfi pillow](https://musicalfieldsforever.com/interactive-art/orfi/concept/) left over from an old installation i did together with musicalfieldsforever
 
 ![orfi_twitter](https://raw.github.com/redFrik/udk10-Embedded_Systems/master/udk131219/orfi_twitter/orfi_twitter.jpg)
 
@@ -137,7 +137,7 @@ It's a sort of wireless pillow that plays sounds and melodies generated from twi
 There's a python program that scans twitter messages, read sensors and controls (pwm) the six leds. There is also a supercollider program that generates and plays the melodies. All the source code and schematics are in the folder 'orfi_twitter' next to this readme file. And to get the twitter thing running I followed tutorials here...
 
 * <https://learn.sparkfun.com/tutorials/raspberry-pi-twitter-monitor/register-your-twitter-app>
-* <http://www.makeuseof.com/tag/how-to-build-a-raspberry-pi-twitter-bot/>
+* <https://www.makeuseof.com/tag/how-to-build-a-raspberry-pi-twitter-bot/>
 
 Basically you need to do the following on your beaglebone black...
 
@@ -146,7 +146,7 @@ Basically you need to do the following on your beaglebone black...
 * `sudo apt-get install python-pip` # you should already have this
 * `sudo pip install twython`
 * then move over (with scp) the files orfi_twitter_autostart, orfi_twitter.py and orfi_twitter.scd to /home/debian/
-* register an application at http://dev.twitter.com (see links to tutorials above)
+* register an application at https://developer.twitter.com/en (see links to tutorials above)
 * `pico orfi_twitter.py` # and edit the four twitter authentication tokens where it says 'edit'
 * `sudo pico /etc/rc.local` # and add the line: `(sleep 5; /bin/bash /home/debian/orfi_twitter_autostart) &`
 * shut down, connect soundcard and speaker + internet (if you use wlan it needs to be prepared. see [udk131128](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131128#--extra))
@@ -160,7 +160,7 @@ With the 5000mAh 5v battery fully charged, the system runs for about 9.5 hours.
 
 //--extra: disable hdmi
 -----------------------
-(Advanced) To make more GPIO pins available one need to disable hdmi. See <http://www.logicsupply.com/blog/2013/07/18/disabling-the-beaglebone-black-hdmi-cape/>
+(Advanced) To make more GPIO pins available one need to disable hdmi. See <https://www.onlogic.com/company/io-hub/disabling-the-beaglebone-black-hdmi-cape/>
 * `sudo mkdir /mnt/boot`
 * `sudo mount /dev/mmcblk0p1 /mnt/boot`
 * `sudo pico /mnt/boot/uEnv.txt`

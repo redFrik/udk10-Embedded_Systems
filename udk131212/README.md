@@ -3,20 +3,20 @@
 
 _arduino and supercollider together plus sensors, prepare own projects_
 
-This time we'll do a little detour and look at [arduino](http://arduino.cc). This to learn more about basic electronics (analog vs digital, sensors, pulse-width modulation (pwm), voltage divider etc).
+This time we'll do a little detour and look at [arduino](https://arduino.cc). This to learn more about basic electronics (analog vs digital, sensors, pulse-width modulation (pwm), voltage divider etc).
 
 Note: all the things we do with the arduino you can also do with the beaglebone black. It is just simpler and quicker to use the arduino+laptop combo for these experiments.
 
 //--arduino hardware
 --------------------
 The arduino hardware is a small microcontroller (computer) that you can program to do simple tasks like reading sensors, controls motors, set timers, do simple logic, lo-fi sound etc. Normally it's built with an 8bit atmel mega chip and run off 5 volts, but there are boards with other chips and other voltages.
-Actually there are very many versions, variants, clones, ripoffs and hacks. From minimal and small (like [trinket](http://www.adafruit.com/products/1501) and [gemma](http://www.adafruit.com/products/1222)) to big (like [mega](http://arduino.cc/en/Main/ArduinoBoardMega2560)), old, new, cheap, expensive, improved, fake arduinos. See [products](http://arduino.cc/en/Main/Products), [hardware index](http://arduino.cc/en/Main/Boards) and [similar boards](http://playground.arduino.cc/Main/SimilarBoards). You can also build one yourself (see [last semester](https://github.com/redFrik/udk09-Bits_and_Pieces/tree/master/udk130516)).
+Actually there are very many versions, variants, clones, ripoffs and hacks. From minimal and small (like [trinket](https://www.adafruit.com/products/1501) and [gemma](https://www.adafruit.com/products/1222)) to big (like [mega](https://store.arduino.cc/arduino-mega-2560-rev3)), old, new, cheap, expensive, improved, fake arduinos. See [products](https://www.arduino.cc/en/Main/Products), [hardware index](https://www.arduino.cc/en/Main/Boards) and [similar boards](https://playground.arduino.cc/Main/SimilarBoards/). You can also build one yourself (see [last semester](https://github.com/redFrik/udk09-Bits_and_Pieces/tree/master/udk130516)).
 
 //--arduino ide
 ---------------
-To program the board you'll normally use the arduino ide. Download and install it from <http://arduino.cc/en/Main/Software>.
+To program the board you'll normally use the arduino ide. Download and install it from <https://www.arduino.cc/en/software>.
 
-(You can also program arduino boards from the terminal, xcode or eclipse or even in your [browser](http://codebender.cc), but the official ide is by far the easiest to get started with.)
+(You can also program arduino boards from the terminal, xcode or eclipse or even in your [browser](https://codebender.cc), but the official ide is by far the easiest to get started with.)
 
 //--programming the board
 -------------------------
@@ -42,8 +42,8 @@ Troubleshooting / common mistakes:
 
 * wrong serial port or board selected
 * serial port is already in use by another application in the background (quit sc, pd, max or whatever)
-* missing ftdi driver <http://arduino.cc/en/Guide/Howto>
-* <http://arduino.cc/en/Guide/Troubleshooting>
+* missing ftdi driver
+* <https://support.arduino.cc/hc/en-us>
 
 //--serial communication (arduino -> laptop)
 --------------------------------------------
@@ -291,5 +291,5 @@ If you are running Windows, the SerialPort in SuperCollider is not available. On
 //--links
 ---------
 
-* <http://www.pighixxx.com/abc-arduino-basic-connections/> great resources (pdf)
-* <http://learn.adafruit.com/category/learn-arduino> lots of good tutorials
+* <https://web.archive.org/web/20131215051859/http://www.pighixxx.com/abc-arduino-basic-connections/> great resources (pdf)
+* <https://learn.adafruit.com/category/learn-arduino> lots of good tutorials

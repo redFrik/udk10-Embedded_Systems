@@ -41,7 +41,7 @@ Start readsensors1 with...
 * `0.exit`
 * `sudo pkill python`
 
-Now connect sensors to the pins listed in the readsensors python code. See pin connection diagram here... [http://www.alexanderhiam.com/blog/beaglebone-pinout/](http://www.alexanderhiam.com/blog/beaglebone-pinout/) and also see instructions two weeks ago [here](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131114#--second-python-program)
+Now connect sensors to the pins listed in the readsensors python code. See pin connection diagram here... [http://www.alexanderhiam.com/blog/beaglebone-pinout/](https://web.archive.org/web/20141024082937/http://www.alexanderhiam.com/blog/beaglebone-pinout/) and also see instructions two weeks ago [here](https://github.com/redFrik/udk10-Embedded_Systems/tree/master/udk131114#--second-python-program)
 
 //--receiving osc in python
 ---------------------------
@@ -58,7 +58,7 @@ The osctest2 python program should print out `[123]`. Stop it with ctrl+c.
 
 //--extra: wlan/wifi
 --------------------
-Optional - if you have a wlan usb stick like [this](http://www.reichelt.de/WLAN-Adapter/LOGILINK-WL0084B/3/index.html?&ACTION=3&LA=5&ARTICLE=120745&GROUPID=770&artnr=LOGILINK+WL0084B)
+Optional - if you have a wlan usb stick like [this](https://www.reichelt.de/wlan-adapter-usb-150-mbit-s-logilink-wl0084e-p169760.html?search=wl0084e)
 
 * `sudo apt-get update`
 * `sudo apt-get upgrade`
@@ -81,8 +81,8 @@ It should say something like... "bound to 192.168.1.56 -- renewal in 243311 seco
 
 Now try to turn off the bbb (`sudo halt`), disconnect the ethernet cable, start up again and connect again using the new IP given (`ssh debian@192.168.1.56`). Note that it will take a while before you'll be able to log in - wait for the led to start blinking.
 
-To connect the usb soundcard and wlan usb adapter at the same time, you'll need a small usb hub like [this](http://www.reichelt.de/USB-Hubs/MANHATTAN-160599/3//index.html?ARTICLE=94684).
+To connect the usb soundcard and wlan usb adapter at the same time, you'll need a small usb hub like [this](https://www.reichelt.de/nicht-mehr-lieferbar-manhattan-160599-p94684.html?r=1).
 
 //--links
 ---------
-* <http://www.cyberciti.biz/faq/debian-linux-wpa-wpa2-wireless-wifi-networking/> (advanced)
+* <https://www.cyberciti.biz/faq/debian-linux-wpa-wpa2-wireless-wifi-networking/> (advanced)
